@@ -2,10 +2,12 @@
 //
 
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    cout << "Hello World!\n";
+    cout << "This is the first C++ program of Jellyfish!\n";
 
     return 0;
 }
