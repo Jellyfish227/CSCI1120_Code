@@ -7,17 +7,16 @@ using namespace std;
 int main()
 {
     cout << "Hello World!\n";
-    cout << "This is the second program in C++.";
+
+    int a = 10;
+    double b = 10.0;    //the .0 is discarded
     
+    int oct = 017;    //The 0 in the front indicates an octal number, thus output 15(in decimal)
+    int hex = 0xf;  //The 0x in the front indicates a hexadecimal number, thus output 15
+
+
+    cout << oct << endl << hex << endl;
+    
+    return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
