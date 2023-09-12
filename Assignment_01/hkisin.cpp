@@ -4,29 +4,23 @@
 
 #include <iostream>
 #include <math.h>
+#include <iomanip>
 using namespace std;
 
 int main()
 {
     //set variable
-    int num;
+    int partialISIN;
 
     //input 9 digit
     cout << "Enter partial HK ISIN: ";
-    cin >> num;
+    cin >> partialISIN;
 
     //extract digit
     int arr[9] = { 0 };
     for (int i = 0; i < 9; i++)
     {
-        arr[i] = num / (int)pow(10, 8 - i) % 10;
-    }
-
-    //duplicate printing array
-    int arrPrint[9];
-    for (int i = 0; i < 9; i++)
-    {
-        arrPrint[i] = arr[i];
+        arr[i] = partialISIN / (int)pow(10, 8 - i) % 10;
     }
 
     //double the odd digit
@@ -55,12 +49,7 @@ int main()
     checkDig = checkDig % 10;
     
     //output ISIN
-    cout << "Full HK ISIN is HK";
-    for (int i = 0; i < 9; i++)
-    {
-        cout << arrPrint[i];
-    }
-    cout << checkDig << endl;
+    cout << "Full HK ISIN is HK" << setw(9) << setfill('0') << partialISIN << checkDig << endl;
 
     return 0;
 }
