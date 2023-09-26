@@ -28,38 +28,45 @@ int main() {
     while (!isGameOver) {
         //run nested loop here to print the grid of * with H and C
         //at their current grid locations (hi, hj) and (ci, cj)
-        for (int i = 0; i < n; i++){
-            for (int j = n; j > 0; j--){
-                if (0 == i || n-1 == i){
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (0 == i || n - 1 == i) {
                     cout << '*';
                 }
-                else if (0 == j || n-1 == j){
+                else if (0 == j || n - 1 == j) {
                     cout << '*';
                 }
-                
+                else if (i == j || i == n - 1 - j)
+                {
+                    cout << '*';
+                }
+                else
+                {
+                    cout << ' ';
+                }
             }
+            cout << endl;
         }
-    
         // play rock, paper, scissors
         while (true) {
             human choice = input from cin // R, P or S
-            computer choice = play(rps) // random choice of R, P or S
-            print human vs. computer choice 
-            if (not draw) {
-                // roll a die for random d steps to move
-                d = roll(die)
-                if (human wins)
-                    add d to Hâ€™s distance away from its start
-                else
-                    add d to Câ€™s distance away from its start
-                    break
-            }
+                computer choice = play(rps) // random choice of R, P or S
+                print human vs.computer choice
+                if (not draw) {
+                    // roll a die for random d steps to move
+                    d = roll(die)
+                        if (human wins)
+                            add d to H’s distance away from its start
+                        else
+                            add d to C’s distance away from its start
+                            break
+                }
         }
-        adjust Hâ€™s location (hi, hj) based on its distance away from start
-        adjust Câ€™s location (ci, cj) based on its distance away from start
-    
-        if either end is reached
-        set game over to true
+        adjust H’s location(hi, hj) based on its distance away from start
+            adjust C’s location(ci, cj) based on its distance away from start
+
+            if either end is reached
+                set game over to true
 
     }
 }
