@@ -6,11 +6,20 @@ using namespace std;
 
 int main()
 {
-	int n = 5;
+	int n = 6;
+
+	int hi = 0, hj = 0;
+	int ci = n-1, cj = 0;
 
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
-			if (0 == i || n - 1 == i) {
+			if (hi == i && hj == j) {
+				cout << 'H';
+			}
+			else if (ci == i && cj == j) {
+				cout << 'C';
+			}
+			else if (0 == i || n - 1 == i) {
 				cout << '*';
 			}
 			else if (0 == j || n - 1 == j) {
