@@ -24,6 +24,13 @@ string rpsChoice(int rps) {
     }
 }
 
+int move(int original, int step, int limit) {
+    limit -= 1;
+    if (original + step > limit) {
+        return -1 * (original + step);
+    }
+}
+
 int main() {
     //input seed and size
     int seed, n;
@@ -43,20 +50,24 @@ int main() {
     //round counter
     int round = 0;
 
+    //move counter
+    int hSteps = 0;
+    int cSteps = 0;
+
     //main loop by game over detection
     bool isGameOver = false;
     while (!isGameOver) {
-        //run nested loop here to print the grid of * with H and C
-        //at their current grid locations (hi, hj) and (ci, cj)
         round++;
+
+        //print board
         cout << "Round " << round << ": " << endl;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (hi == i && hj == j) {
-                    cout << 'H';
-                }
-                else if (ci == i && cj == j) {
+                if (ci == i && cj == j) {
                     cout << 'C';
+                }
+                else if (hi == i && hj == j) {
+                    cout << 'H';
                 }
                 else if (0 == i || n - 1 == i) {
                     cout << '*';
@@ -86,33 +97,39 @@ int main() {
             //print human vs computer
             cout << "Human picks " << rpsChoice(hRPS) << ". " << endl;
             cout << "Computer picks " << rpsChoice(cRPS) << ". " << endl;
-
+            
+            //win detemination
             bool isDraw = false;
             bool isHumanWin = false;
 
-            void winJudging(int h, int c) {
-                if (0 == h - c) {
-                    isDraw = true;
-                }
-                else if (-2 == h - c || h - c == 1) {
-                    isHumanWin = true;
-                }
-                else {
-                    isHumanWin = false;
-                }
+            if (0 == hRPS - cRPS) {
+                isDraw = true;
+            }
+            else if (-2 == hRPS - cRPS || 1 == hRPS - cRPS) {
+                isHumanWin = true;
+            }
+            else {
+                isHumanWin = false;
             }
 
+            //moving player
             if (!isDraw) {
                 // roll a die for random d steps to move
                 int d = 0;
-                d = roll(die)
+                d = roll(die);
+
+                int maxLim = n - 1, int minLim = 0;
+                
                 if (isHumanWin) {
-                    if (hj + d > n - 1) {
-                        hi += (hj + d) % (n - 1);
-                        hj += (n - 1) - (hj + d) % (n - 1);
+                    hSteps += d;
+                    if (hj + d > maxLim) {
+                        int move = hj + d;
+                        hi = maxLim - move % maxLim;
+                        hj += move % maxLim;
                     }
                 }
                 else {
+                    cSteps += d;
                     ci;
                     cj;
                 }
@@ -122,11 +139,13 @@ int main() {
                             break
                 }
         }
-        adjust H’s location(hi, hj) based on its distance away from start
-            adjust C’s location(ci, cj) based on its distance away from start
-
-            if either end is reached
-                isGameOver = true;
-
+        
+        int winningSteps = 3 * n - 2;
+        if (hSteps >= winningSteps || cSteps >= winningSteps) {
+            isGameOver = true;
+        }
     }
+
+
+    return 0;
 }

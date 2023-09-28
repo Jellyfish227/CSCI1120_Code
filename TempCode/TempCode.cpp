@@ -4,13 +4,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-	int n = 6;
-
-	int hi = 0, hj = 0;
-	int ci = n-1, cj = 0;
-
+void printboard(int hi, int hj, int ci,int cj, int n) {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			if (hi == i && hj == j) {
@@ -25,17 +19,35 @@ int main()
 			else if (0 == j || n - 1 == j) {
 				cout << '*';
 			}
-			else if (i == j || i == n - 1 - j)
-			{
+			else if (i == j || i == n - 1 - j) {
 				cout << '*';
 			}
-			else
-			{
+			else {
 				cout << ' ';
 			}
 		}
 		cout << endl;
 	}
+}
+
+int main()
+{
+	int n = 4;
+
+	int hi = 0, hj = 0;
+	int ci = n-1, cj = 0;
+
+	printboard(hi, hj, ci, cj, n);
+
+	int move = 5;
+	if (hj + move > n - 1) {
+		hi += (hj + move) % (n - 1);
+		hj += (n - 1) - (hj + move) % (n - 1);
+	}
+	cout << endl;
+
+	printboard(hi, hj, ci, cj, n);
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
