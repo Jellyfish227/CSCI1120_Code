@@ -18,7 +18,7 @@ string rpsChoice(int rps) {
             return "Paper";
             break;
         case 3:
-            return "Stone";
+            return "Scissors";
         default:
             break;
     }
@@ -44,8 +44,8 @@ int main() {
 
     //initial position declaration
     int hi, hj, ci, cj;
-    hi = 1, hj = 1; // initial grid location of human piece
-    ci = n, cj = 1; // initial grid location of computer piece
+    hi = 0, hj = 0; // initial grid location of human piece
+    ci = n-1, cj = 0; // initial grid location of computer piece
 
     //round counter
     int round = 0;
@@ -64,28 +64,29 @@ int main() {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (ci == i && cj == j) {
-                    cout << 'C';
+                    cout << "C ";
                 }
                 else if (hi == i && hj == j) {
-                    cout << 'H';
+                    cout << "H ";
                 }
                 else if (0 == i || n - 1 == i) {
-                    cout << '*';
+                    cout << "* ";
                 }
                 else if (0 == j || n - 1 == j) {
-                    cout << '*';
+                    cout << "* ";
                 }
-                else if (i == j || i == n - 1 - j)
-                {
-                    cout << '*';
+                else if (i == j || i == n - 1 - j) {
+                    cout << "* ";
                 }
-                else
-                {
-                    cout << ' ';
+                else {
+                    cout << "  ";
                 }
             }
             cout << endl;
         }
+
+        bool isHComplemented = false;
+        bool isCComplemented = false;
 
         // play rock, paper, scissors
         int hRPS, cRPS = 0;
@@ -97,13 +98,15 @@ int main() {
             //print human vs computer
             cout << "Human picks " << rpsChoice(hRPS) << ". " << endl;
             cout << "Computer picks " << rpsChoice(cRPS) << ". " << endl;
-            
+
             //win detemination
             bool isDraw = false;
             bool isHumanWin = false;
 
             if (0 == hRPS - cRPS) {
                 isDraw = true;
+                cout << "Draw!" << endl;
+                continue;
             }
             else if (-2 == hRPS - cRPS || 1 == hRPS - cRPS) {
                 isHumanWin = true;
@@ -118,34 +121,121 @@ int main() {
                 int d = 0;
                 d = roll(die);
 
-                int maxLim = n - 1, int minLim = 0;
-                
+                int maxLim = n - 1;
+                int minLim = 0;
+
                 if (isHumanWin) {
+                    cout << "Human wins and moves " << d << " step(s)." << endl;
                     hSteps += d;
-                    if (hj + d > maxLim) {
-                        int move = hj + d;
-                        hi = maxLim - move % maxLim;
-                        hj += move % maxLim;
+                    int dx = hj + d;
+                    if (hi == minLim || hi == maxLim) { //from horizontal row
+                        if (dx > maxLim) { //from horizontal row, larger than limit
+                            isHComplemented = (dx / maxLim) % 2 == 1 ? !isHComplemented : isHComplemented;
+                            dx %= maxLim;
+                            if (isHComplemented) { //from horizontal, larger than limit, to diagonal
+                                hj = maxLim - dx;
+                                hi = hi == minLim ? hi + dx : maxLim - dx; //flip when hi is at max
+                                break;
+                            }
+                            else { //from horizontal row,larger than limit, to horizontal
+                                hj = dx;
+                                hi = (hi == minLim) ? maxLim : minLim;
+                                break;
+                            }
+                        }
+                        else { //from horizontal, less then limit
+                            hj = dx;
+                            hi = hi;
+                            break;
+                        }
+                    }
+                    else { //from diagonal
+                        int dy = hi + d;
+                        if (dy > maxLim) { //from diagonal, larger than limit
+                            isHComplemented = ((d - hj) / maxLim) % 2 == 1 ? !isHComplemented : isHComplemented;
+                            dx %= maxLim;
+                            if (!isHComplemented) { //from diagonal, larger than limit, to horizontal
+                                hj = (d - hj) % maxLim;
+                                hi = d < 3 * maxLim - 2 ? maxLim : minLim;
+                                break;
+                            }
+                            else { //from diagonal, larger than limit, to diagonal
+                                hj = maxLim - dx;
+                                hi = maxLim - dx;
+                                break;
+                            }
+
+                        }
+                        else { //from diagonal, less than limit
+                            hj = maxLim - d;
+                            hi = dy;
+                            break;
+                        }
                     }
                 }
                 else {
+                    cout << "Computer wins and moves " << d << " step(s)." << endl;
                     cSteps += d;
-                    ci;
-                    cj;
+                    int dx = cj + d;
+                    if (ci == minLim || ci == maxLim) { //from horizontal row
+                        if (dx > maxLim) { //from horizontal row, larger than limit
+                            isCComplemented = (dx / maxLim) % 2 == 1 ? !isCComplemented : isCComplemented;
+                            dx %= maxLim;
+                            if (isCComplemented) { //from horizontal, larger than limit, to diagonal
+                                cj = maxLim - dx;
+                                ci = ci == maxLim ? maxLim - dx : ci + dx; //flip when ci is at max
+                                break;
+                            }
+                            else { //from horizontal row,larger than limit, to horizontal
+                                cj = dx;
+                                ci = (ci == maxLim) ? minLim : maxLim;
+                                break;
+                            }
+                        }
+                        else { //from horizontal, less then limit
+                            cj = dx;
+                            ci = ci;
+                            break;
+                        }
+                    }
+                    else { //from diagonal
+                        int dy = ci - d;
+                        if (dy < minLim) { //from diagonal, over limit
+                            isCComplemented = ((d - cj) / maxLim) % 2 == 1 ? !isCComplemented : isCComplemented;
+                            dx %= maxLim;
+                            if (!isCComplemented) { //from diagonal, larger than limit, to horizontal
+                                cj = (d - hi) % maxLim;
+                                ci = d < 3 * maxLim - 2 ? minLim : maxLim;
+                                break;
+                            }
+                            else { //from diagonal, larger than limit, to diagonal
+                                cj = maxLim - dx;
+                                ci = dx;
+                                break;
+                            }
+                        }
+                        else { //from diagonal, less than limit
+                            cj = maxLim - d;
+                            ci = maxLim - d;
+                            break;
+                        }
+                    }
                 }
-                        add d to H’s distance away from its start
-                        else
-                            add d to C’s distance away from its start
-                            break
-                }
-        }
-        
-        int winningSteps = 3 * n - 2;
-        if (hSteps >= winningSteps || cSteps >= winningSteps) {
-            isGameOver = true;
-        }
-    }
+            }
 
+        }
+            int winningSteps = 3 * n - 2;
+            if (hSteps >= winningSteps) {
+                isGameOver = true;
+                cout << "Game over! " << endl;
+                cout << "Human wins the game!" << endl;
+            }
+            else if (cSteps >= winningSteps) {
+                isGameOver = true;
+                cout << "Computer wins the game!" << endl;
+            }
+            
+    }
 
     return 0;
 }
