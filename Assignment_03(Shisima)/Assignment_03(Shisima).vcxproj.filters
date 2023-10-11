@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="shisimagame.cpp">
+    <ClCompile Include="shisimaboard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="shisimaboard.cpp">
+    <ClCompile Include="shisimagame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

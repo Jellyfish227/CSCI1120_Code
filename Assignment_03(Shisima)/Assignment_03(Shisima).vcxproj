@@ -127,8 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="shisimaboard.cpp" />
     <ClCompile Include="shisimagame.cpp" />
+    <ClCompile Include="shisimaboard.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shisimaboard.h" />

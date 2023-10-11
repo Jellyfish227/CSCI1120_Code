@@ -30,6 +30,29 @@ void printboard(int hi, int hj, int ci,int cj, int n) {
 	}
 }
 
+int power(int base, int power) {
+	for (int i = power; i > 0; i--) {
+		base *= base;
+	}
+
+	return base;
+}
+
+int abs(int value) {
+	value = power(power(value, 2), 0.5);
+
+	return value;
+}
+
+bool isAdj(int pos1, int pos2) {
+	/*Split position value into respective i and j*/
+	
+	/*Determine if Adj*/
+	if (true) {
+
+	}
+}
+
 int main()
 {
 	int n = 4;
