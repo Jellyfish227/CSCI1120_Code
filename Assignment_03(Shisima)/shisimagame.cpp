@@ -8,6 +8,10 @@ int main() {
 	int board = 102102102;
 	int pos, pos1, pos2;
 	int p;
+	bool isGameOver = false;
+
+	while (!isGameOver) {
 
 
+	}
 }
