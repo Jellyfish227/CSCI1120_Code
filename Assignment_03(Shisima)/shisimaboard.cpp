@@ -9,8 +9,15 @@ using namespace std;
 /* Returns the state of position pos of the game board. */
 int boardState(int board, int pos) {
     // TODO: Add a return statement in order to compile
+    int power = 8 - (pos - 1);
+    int denominator = 1;
+    const int BASE = 10;
 
-
+    for (int i = power; i > 0; i--) {
+		denominator *= BASE;
+	}
+    
+    return (board / denominator) % 10;
 }
 
 /* Prints the board to the screen. DO NOT MODIFY! */

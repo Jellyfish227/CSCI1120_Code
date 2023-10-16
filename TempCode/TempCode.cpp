@@ -48,29 +48,29 @@ bool isAdj(int pos1, int pos2) {
 	/*Split position value into respective i and j*/
 	
 	/*Determine if Adj*/
-	if (true) {
-
-	}
+	return true;
 }
 
 int main()
 {
-	int n = 4;
+	int board = 102102102;
 
-	int hi = 0, hj = 0;
-	int ci = n-1, cj = 0;
+	int boardState(int board, int pos){
+		int power = 8 - (pos - 1);
+		int den = 1;
+		const int BASE = 10;
 
-	printboard(hi, hj, ci, cj, n);
-
-	int move = 5;
-	if (hj + move > n - 1) {
-		hi += (hj + move) % (n - 1);
-		hj += (n - 1) - (hj + move) % (n - 1);
+		for (int i = 0; i < power; i++)
+		{
+			den *= BASE;
+		}
+		
+		return (board / den) % 10;
 	}
-	cout << endl;
 
-	printboard(hi, hj, ci, cj, n);
+	cout << boardState(board, 1) << endl;
 
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

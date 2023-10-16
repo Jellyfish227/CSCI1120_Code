@@ -1,0 +1,23 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jellyfish/Documents/Year_2/CSCI1120_Code/TempCode/TempCode'
+relocations:
+  - { offsetInCU: 0xDE, offset: 0xDE, size: 0x8, addend: 0x0, symName: __Z10printboardiiiii, symObjAddr: 0x0, symBinAddr: 0x100003B60, symSize: 0x1A8 }
+  - { offsetInCU: 0x3206, offset: 0x3206, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0xECA0, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x350C, offset: 0x350C, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIjEE, symObjAddr: 0x2F5, symBinAddr: 0x100003EAD, symSize: 0x0 }
+  - { offsetInCU: 0x3526, offset: 0x3526, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedImEE, symObjAddr: 0x2F6, symBinAddr: 0x100003EAE, symSize: 0x0 }
+  - { offsetInCU: 0x3540, offset: 0x3540, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIyEE, symObjAddr: 0x2F7, symBinAddr: 0x100003EAF, symSize: 0x0 }
+  - { offsetInCU: 0x356A, offset: 0x356A, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_TempCode.cpp, symObjAddr: 0x2CC, symBinAddr: 0x100003E2C, symSize: 0x14 }
+  - { offsetInCU: 0x3592, offset: 0x3592, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x290, symBinAddr: 0x100003DF0, symSize: 0x3C }
+  - { offsetInCU: 0x359A, offset: 0x359A, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_TempCode.cpp, symObjAddr: 0x2CC, symBinAddr: 0x100003E2C, symSize: 0x14 }
+  - { offsetInCU: 0x358E, offset: 0x358E, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x230, symBinAddr: 0x100003D90, symSize: 0x60 }
+  - { offsetInCU: 0x3596, offset: 0x3596, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x290, symBinAddr: 0x100003DF0, symSize: 0x3C }
+  - { offsetInCU: 0x35D3, offset: 0x35D3, size: 0x8, addend: 0x0, symName: __Z5isAdjii, symObjAddr: 0x220, symBinAddr: 0x100003D80, symSize: 0x10 }
+  - { offsetInCU: 0x35DB, offset: 0x35DB, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x230, symBinAddr: 0x100003D90, symSize: 0x60 }
+  - { offsetInCU: 0x3616, offset: 0x3616, size: 0x8, addend: 0x0, symName: _abs, symObjAddr: 0x1F0, symBinAddr: 0x100003D50, symSize: 0x30 }
+  - { offsetInCU: 0x361E, offset: 0x361E, size: 0x8, addend: 0x0, symName: __Z5isAdjii, symObjAddr: 0x220, symBinAddr: 0x100003D80, symSize: 0x10 }
+  - { offsetInCU: 0x365C, offset: 0x365C, size: 0x8, addend: 0x0, symName: __Z5powerii, symObjAddr: 0x1A8, symBinAddr: 0x100003D08, symSize: 0x48 }
+  - { offsetInCU: 0x3664, offset: 0x3664, size: 0x8, addend: 0x0, symName: _abs, symObjAddr: 0x1F0, symBinAddr: 0x100003D50, symSize: 0x30 }
+  - { offsetInCU: 0x36DB, offset: 0x36DB, size: 0x8, addend: 0x0, symName: __Z10printboardiiiii, symObjAddr: 0x0, symBinAddr: 0x100003B60, symSize: 0x1A8 }
+  - { offsetInCU: 0x36E3, offset: 0x36E3, size: 0x8, addend: 0x0, symName: __Z5powerii, symObjAddr: 0x1A8, symBinAddr: 0x100003D08, symSize: 0x48 }
+...

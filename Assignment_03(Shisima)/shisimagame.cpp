@@ -2,7 +2,9 @@
 // Student ID: 1155193237
 // Email:      chyu@link.cuhk.edu.hk
 
-//Determin the state od the certain position
+#include "shisimaboard.h"
+#include <iostream>
+using namespace std;
 
 int main() {
 	int board = 102102102;
@@ -10,8 +12,24 @@ int main() {
 	int p;
 	bool isGameOver = false;
 
-	while (!isGameOver) {
+	cout << boardState(board, 2);
 
+	/* while (!isGameOver) {
 
-	}
+		printBoard(board); 
+		
+		bool isPlayer1 = true;
+		bool isMoveValid = false;
+		do
+		{
+			if (!isMoveValid){
+				cout << "Invalid. Try again!" << endl;
+			}
+			cout << "Player " << isPlayer1 ? "1" : "2";
+			cout << " (from to): ";
+			cin >> pos1 >> pos2;
+		} while (!isMoveValid);
+		
+
+	} */
 }
