@@ -8,16 +8,12 @@ using namespace std;
 
 /* Returns the state of position pos of the game board. */
 int boardState(int board, int pos) {
-    // TODO: Add a return statement in order to compile
-    int power = 8 - (pos - 1);
-    int denominator = 1;
-    const int BASE = 10;
-
-    for (int i = power; i > 0; i--) {
-		denominator *= BASE;
+    int den = 1;
+    for (int i = 8 - (pos - 1); i > 0; i--) {
+		den *= 10;
 	}
     
-    return (board / denominator) % 10;
+    return (board / den) % 10;
 }
 
 /* Prints the board to the screen. DO NOT MODIFY! */
@@ -33,7 +29,7 @@ void printBoard(int board) {
    pos2 of board. */
 bool movePiece(int& board, int pos1, int pos2, int p) {
     // TODO: Add a return statement in order to compile
-
+    return 0;
 
 }
 
@@ -42,7 +38,7 @@ bool movePiece(int& board, int pos1, int pos2, int p) {
 int formLine(int board) {
     // TODO: Add a return statement in order to compile
 
-
+    return 0;
 }
 
 /* You may write a main() in this file for debugging purpose, but it must be

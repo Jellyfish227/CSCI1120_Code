@@ -4,69 +4,67 @@
 #include <iostream>
 using namespace std;
 
-void printboard(int hi, int hj, int ci,int cj, int n) {
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			if (hi == i && hj == j) {
-				cout << 'H';
-			}
-			else if (ci == i && cj == j) {
-				cout << 'C';
-			}
-			else if (0 == i || n - 1 == i) {
-				cout << '*';
-			}
-			else if (0 == j || n - 1 == j) {
-				cout << '*';
-			}
-			else if (i == j || i == n - 1 - j) {
-				cout << '*';
-			}
-			else {
-				cout << ' ';
-			}
-		}
-		cout << endl;
-	}
-}
+// void printboard(int hi, int hj, int ci,int cj, int n) {
+// 	for (int i = 0; i < n; i++) {
+// 		for (int j = 0; j < n; j++) {
+// 			if (hi == i && hj == j) {
+// 				cout << 'H';
+// 			}
+// 			else if (ci == i && cj == j) {
+// 				cout << 'C';
+// 			}
+// 			else if (0 == i || n - 1 == i) {
+// 				cout << '*';
+// 			}
+// 			else if (0 == j || n - 1 == j) {
+// 				cout << '*';
+// 			}
+// 			else if (i == j || i == n - 1 - j) {
+// 				cout << '*';
+// 			}
+// 			else {
+// 				cout << ' ';
+// 			}
+// 		}
+// 		cout << endl;
+// 	}
+// }
 
-int power(int base, int power) {
-	for (int i = power; i > 0; i--) {
-		base *= base;
-	}
+// int power(int base, int power) {
+// 	for (int i = power; i > 0; i--) {
+// 		base *= base;
+// 	}
 
-	return base;
-}
+// 	return base;
+// }
 
-int abs(int value) {
-	value = power(power(value, 2), 0.5);
+// int abs(int value) {
+// 	value = power(power(value, 2), 0.5);
 
-	return value;
-}
+// 	return value;
+// }
 
-bool isAdj(int pos1, int pos2) {
-	/*Split position value into respective i and j*/
+// bool isAdj(int pos1, int pos2) {
+// 	/*Split position value into respective i and j*/
 	
-	/*Determine if Adj*/
-	return true;
+// 	/*Determine if Adj*/
+// } 
+
+
+int boardState(int board, int pos) {
+    // TODO: Add a return statement in order to compile
+    int den = 1;
+
+    for (int i = 8 - (pos - 1); i > 0; i--) {
+		den *= 10;
+	}
+
+    return (board / den) % 10;
 }
 
 int main()
 {
 	int board = 102102102;
-
-	int boardState(int board, int pos){
-		int power = 8 - (pos - 1);
-		int den = 1;
-		const int BASE = 10;
-
-		for (int i = 0; i < power; i++)
-		{
-			den *= BASE;
-		}
-		
-		return (board / den) % 10;
-	}
 
 	cout << boardState(board, 1) << endl;
 

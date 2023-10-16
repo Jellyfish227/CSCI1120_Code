@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/jellyfish/Documents/Year_2/CSCI1120_Code/Assignment_03(Shisima)",
-      "program": "/Users/jellyfish/Documents/Year_2/CSCI1120_Code/Assignment_03(Shisima)/build/Debug/outDebug"
+      "cwd": "/Users/jellyfish/Documents/Year_2/CSCI1120_Code/TempCode",
+      "program": "/Users/jellyfish/Documents/Year_2/CSCI1120_Code/TempCode/build/Debug/outDebug"
     }
   ]
 }
