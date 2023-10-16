@@ -6,11 +6,12 @@
 #include <iostream>
 using namespace std;
 
+
 int main() {
 	int board = 102102102;
-	int pos, pos1, pos2;
-	int p;
-	bool isGameOver = false;
+	// int pos, pos1, pos2;
+	// int p;
+	// bool isGameOver = false;
 
 	cout << boardState(board, 2);
 
