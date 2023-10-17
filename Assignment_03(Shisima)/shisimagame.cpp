@@ -8,27 +8,40 @@ using namespace std;
 
 int main() {
 	int board = 102102102;
-	/*int pos, pos1, pos2;
+	int pos, pos1, pos2;
 	int p;
-	bool isGameOver = false;*/
+	bool isGameOver = false;
+	bool isPlayer1 = false; //initialize as imaginary player 0
 
+	while (!isGameOver) { //game start
 
-	/* while (!isGameOver) {
-
+		isPlayer1 = !isPlayer1; //change player each round
+		p = isPlayer1 ? 1 : 2;
+		
 		printBoard(board); 
 		
-		bool isPlayer1 = true;
-		bool isMoveValid = false;
+		bool isMoveValid = true;
 		do
 		{
-			if (!isMoveValid){
+			if (!isMoveValid) 
+			{
 				cout << "Invalid. Try again!" << endl;
 			}
-			cout << "Player " << isPlayer1 ? "1" : "2";
-			cout << " (from to): ";
+			cout << "Player " << p << " (from to): ";
 			cin >> pos1 >> pos2;
+			isMoveValid = movePiece(board, pos1, pos2, p);
 		} while (!isMoveValid);
 		
+		if (formLine(board) != 0)
+		{
+			isGameOver = true;
+			cout << "Player " << p << " wins!" << endl;
+		}
+		else
+			continue;
+		
+		
+	}
 
-	} */
+	return 0;
 }
