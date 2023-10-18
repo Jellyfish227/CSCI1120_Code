@@ -6,6 +6,26 @@
 #include <iostream>
 using namespace std;
 
+/* Mimic the pow function but only function in positive and integer indexes */
+int power(int base, int index) {
+    int output = 1;
+    for (int i = 0; i < index; i++) {
+        output *= base;
+    }
+    return output;
+}
+
+/* Split position into coordinates, output 2 digit int representing (xy)
+   @param board   Board
+   @param p1,p2   Positions to Compare */
+int Coo(int pos){
+    int coordinates = 0;
+    pos--;
+    coordinates += 10 * (pos / 3);
+    coordinates += (pos % 3);
+    return coordinates;
+}
+
 /* Check adjacency
    @param pos,pos2 Coordinates */
 bool isAdj(int pos1, int pos2) {
@@ -31,15 +51,6 @@ bool isAdj(int pos1, int pos2) {
     else {
         return false;
     }
-}
-
-/* Mimic the pow function but only function in positive and integer indexes */
-int power(int base, int index) {
-    int output = 1;
-    for (int i = 0; i < index; i++) {
-        output *= base;
-    }
-    return output;
 }
 
 /* Returns the state of position pos of the game board. */
@@ -105,43 +116,3 @@ int formLine(int board) {
         return 0;
     
 }
-
-/* Split position into coordinates, output 2 digit int representing (xy)
-   @param board   Board
-   @param p1,p2   Positions to Compare */
-int Coo(int pos){
-    int coordinates = 0;
-    pos--;
-    coordinates += 10 * (pos / 3);
-    coordinates += (pos % 3);
-    return coordinates;
-}
-
- /* You may write a main() in this file for debugging purpose, but it must be
-    removed or commented in your submitted version. */
-//
-//int main() {
-//    int board = 102102102;
-//    printBoard(board);
-//    int p = 1;
-//    int pos1, pos2;
-//
-//    while (p != 0) {
-//        cin >> p;
-//        cin >> pos1 >> pos2;
-//        cout << boolalpha;
-//        cout << "Coo of Pos1: " << Coo(pos1) << endl;
-//        cout << "Coo of Pos2: " << Coo(pos2) << endl;
-//        cout << "Board State p1 = p: " << (boardState(board, pos1) == p) << endl;
-//        cout << "Board State p2 = 0: " << (boardState(board, pos2) == 0) << endl;
-//        cout << "isAdj: " << isAdj(pos1, pos2) << endl;
-//        cout << "condition: " << (pos1 >= 1 && pos1 <= 9 && pos2 >= 1 && pos2 <= 9) << endl;
-//        cout << (boardState(board, pos1) == p) << endl;
-//        cout << (boardState(board, pos2) == 0) << endl;
-//
-//        cout << movePiece(board, pos1, pos2, p) << endl;
-//
-//    }
-//    
-//    return 0;
-//}

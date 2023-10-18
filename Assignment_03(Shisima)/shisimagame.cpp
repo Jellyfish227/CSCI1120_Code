@@ -32,11 +32,11 @@ int main() {
 		
 		if (formLine(board) != 0){
 			isGameOver = true;
+			printBoard(board);
 			cout << "Player " << formLine(board) << " wins!" << endl;
 		}
 		else
 			continue;
 	}
-
 	return 0;
 }
