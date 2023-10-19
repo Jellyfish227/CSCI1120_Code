@@ -1,0 +1,82 @@
+  1-0-2
+ / \|/ \
+1---0---2
+ \ /|\ /
+  1-0-2
+Player 1 (from to): 0 1
+Invalid. Try again!
+Player 1 (from to): 1 4
+Invalid. Try again!
+Player 1 (from to): 2 2
+Invalid. Try again!
+Player 1 (from to): 7 5
+  1-0-2
+ / \|/ \
+1---1---2
+ \ /|\ /
+  0-0-2
+Player 2 (from to): 9 10
+Invalid. Try again!
+Player 2 (from to): 6 2
+Invalid. Try again!
+Player 2 (from to): 6 5
+Invalid. Try again!
+Player 2 (from to): 9 8
+  1-0-2
+ / \|/ \
+1---1---2
+ \ /|\ /
+  0-2-0
+Player 1 (from to): 1 2
+  0-1-2
+ / \|/ \
+1---1---2
+ \ /|\ /
+  0-2-0
+Player 2 (from to): 8 7
+  0-1-2
+ / \|/ \
+1---1---2
+ \ /|\ /
+  2-0-0
+Player 1 (from to): 2 1
+  1-0-2
+ / \|/ \
+1---1---2
+ \ /|\ /
+  2-0-0
+Player 2 (from to): 3 2
+  1-2-0
+ / \|/ \
+1---1---2
+ \ /|\ /
+  2-0-0
+Player 1 (from to): 5 9
+  1-2-0
+ / \|/ \
+1---0---2
+ \ /|\ /
+  2-0-1
+Player 2 (from to): 6 5
+  1-2-0
+ / \|/ \
+1---2---0
+ \ /|\ /
+  2-0-1
+Player 1 (from to): 9 8
+  1-2-0
+ / \|/ \
+1---2---0
+ \ /|\ /
+  2-1-0
+Player 2 (from to): 2 3
+  1-0-2
+ / \|/ \
+1---2---0
+ \ /|\ /
+  2-1-0
+Player 2 wins!
+
+D:\Documents\Coding\Visual Studio\CSCI1120_Code\x64\Debug\Assignment_03(Shisima).exe (process 14460) exited with code 0.
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .
