@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TempCode", "TempCode\TempCo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment_03(Shisima)", "Assignment_03(Shisima)\Assignment_03(Shisima).vcxproj", "{BE183A65-C044-4CA8-83B5-2BC3CED9B68E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment_04(Battleship)", "Assignment_04(Battleship)\Assignment_04(Battleship).vcxproj", "{452FC271-AD0A-40B7-9BAC-62E87CAB15CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{BE183A65-C044-4CA8-83B5-2BC3CED9B68E}.Release|x64.Build.0 = Release|x64
 		{BE183A65-C044-4CA8-83B5-2BC3CED9B68E}.Release|x86.ActiveCfg = Release|Win32
 		{BE183A65-C044-4CA8-83B5-2BC3CED9B68E}.Release|x86.Build.0 = Release|Win32
+		{452FC271-AD0A-40B7-9BAC-62E87CAB15CB}.Debug|x64.ActiveCfg = Debug|x64
+		{452FC271-AD0A-40B7-9BAC-62E87CAB15CB}.Debug|x64.Build.0 = Debug|x64
+		{452FC271-AD0A-40B7-9BAC-62E87CAB15CB}.Debug|x86.ActiveCfg = Debug|Win32
+		{452FC271-AD0A-40B7-9BAC-62E87CAB15CB}.Debug|x86.Build.0 = Debug|Win32
+		{452FC271-AD0A-40B7-9BAC-62E87CAB15CB}.Release|x64.ActiveCfg = Release|x64
+		{452FC271-AD0A-40B7-9BAC-62E87CAB15CB}.Release|x64.Build.0 = Release|x64
+		{452FC271-AD0A-40B7-9BAC-62E87CAB15CB}.Release|x86.ActiveCfg = Release|Win32
+		{452FC271-AD0A-40B7-9BAC-62E87CAB15CB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
