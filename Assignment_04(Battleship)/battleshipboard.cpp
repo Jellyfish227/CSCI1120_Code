@@ -265,23 +265,16 @@ void inputYesNo(bool& output, string prompt){
         cin >> input;
         input = toupper(input);
         switch (input) {
-        case 'Y': 
-            output = true;
-            break;
-        case 'N':
-            output = false;
-            break;
-        default:
-            cout << "Invalid. ";
-            continue;
+            case 'Y':
+                output = true;
+                break;
+            case 'N':
+                output = false;
+                break;
+            default:
+                cout << "Invalid. " << endl;
+                continue;
         }
-        // if (Y == input) {
-        //     output = true;
-        // } else if (N == input) {
-        //     output = false;
-        // } else {
-        //     cout << "Invalid. ";
-        //     continue;
-        // }
+        break;
     }
 }

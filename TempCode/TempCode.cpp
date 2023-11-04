@@ -5,14 +5,40 @@
 #include <iomanip>
 using namespace std;
 
+void inputYesNo(bool& output, string prompt) {
+    char input;
+    while (true) {
+        cout << prompt;
+        cin >> input;
+        input = toupper(input);
+        switch (input) {
+            case 'Y':
+                output = true;
+                break;
+            case 'N':
+                output = false;
+                break;
+            default:
+                cout << "Invalid. " << endl;
+                continue;
+        }
+        break;
+    }
+}
 
 int main()
 {
-	char ori, x;
+	/*char ori, x;
 	int y;
 
 	cin >> ori >> x >> y;
-	cout << ori << endl << x << endl << y << endl;
+	cout << ori << endl << x << endl << y << endl;*/
+
+    bool output;
+
+    inputYesNo(output, "Y/N: ");
+    cout << boolalpha;
+    cout << output;
 	return 0;
 }
 
