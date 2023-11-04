@@ -5,6 +5,7 @@
 #include <iostream>
 #include "battleshipboard.h"
 /* You may add extra standard library headers if you see fit */
+#include <ctype.h>
 
 using namespace std;
 
@@ -15,6 +16,13 @@ int main() {
     bool manualSetup = false;
 
     // TODO: Add your code
+    
+    cout << "Enter seed: ";
+    cin >> seed;
+    srand(seed);
+    inputYesNo(gameMode, "Play in game mode (Y/N)? ");
+    inputYesNo(manualSetup, "Manually set up ships (Y/N)? ");
+
 
     // initialize boards and fleets
     char myBoard[N][N] = { ' ' }, enBoard[N][N] = { ' ' };

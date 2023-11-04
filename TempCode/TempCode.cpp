@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 // void printboard(int hi, int hj, int ci,int cj, int n) {
@@ -51,23 +52,68 @@ using namespace std;
 // } 
 
 
-int boardState(int board, int pos) {
-    // TODO: Add a return statement in order to compile
-    int den = 1;
+// int boardState(int board, int pos) {
+//     // TODO: Add a return statement in order to compile
+//     int den = 1;
 
-    for (int i = 8 - (pos - 1); i > 0; i--) {
-		den *= 10;
-	}
+//     for (int i = 8 - (pos - 1); i > 0; i--) {
+// 		den *= 10;
+// 	}
 
-    return (board / den) % 10;
+//     return (board / den) % 10;
+// }
+
+int const N = 15;
+void printBoards(char board1[][N], char board2[][N], bool gameMode) {
+    cout << setw(N * 2 + 2) << left << "Enemy Ocean" << "  "
+        << setw(N * 2 + 2) << left << "Your Ocean" << endl << right;
+
+    // print column headers for both game boards
+    for (int i = 0; i < 2; i++) {
+        cout << string(2 + i * 2, ' ');
+        for (int j = 0; j < N; j++)
+            cout << setw(2) << char('A' + j);
+    }
+    cout << endl;
+
+    // print row indexes and board content for both game boards
+    // TODO: Add your code
+    if (gameMode){
+        for(int i = 1; i < N; i++) {
+            cout << setw(2) << i << right;
+            for (int j = 0; j < N; j++){
+                cout << setw(2) << board1[i - 1][j] << right;
+            }
+            cout << "  ";
+            cout << setw(2) << i << right;
+            for (int j = 0; j < N; j++){
+                cout << setw(2) << board2[i - 1][j] << right;
+            }
+            cout << endl;
+        }
+    }
+    else {
+        for (int i = 1; i <= N; i++){
+            for (int j = 0; j < 2; j++)
+            {
+                cout << setw(3) << i << right;
+                cout << setw(2 * N) << BLANK << right;
+            }
+            
+        }
+        
+    }
 }
 
 int main()
 {
-	int board = 102102102;
+	char myBoard[N][N] = { ' ' }, enBoard[N][N] = { ' ' };
+	
 
-	cout << boardState(board, 1) << endl;
+	fill(myBoard[0] + 0, myBoard[N - 1] + N, BLANK);
+    fill(enBoard[0] + 0, enBoard[N - 1] + N, BLANK);
 
+	printBoards(enBoard, myBoard, true);
 	return 0;
 }
 

@@ -34,5 +34,6 @@ void manuallyPlaceShips(char board[][N]);
 
 /* You may put in extra function prototypes here if you have written extra
    functions in battleshipboard.cpp. */
+void inputYesNo(bool& output, string prompt);
 
 #endif // BATTLESHIPBOARD_H
