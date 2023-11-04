@@ -236,13 +236,13 @@ void manuallyPlaceShips(char board[][N]) {
     for (int k = 0; k < 5; k++) {
         char ship = SHIP_TYPE[k][0];
         while (true) {
-            int y; char x;
+            char ori, x; int y;
             bool vert;
-            string input;
-            getline(cin, input);
-            if (toupper(input.at(0)) == 'V')
+            cout << "Enter h/v and location for Carrier: ";
+            cin >> ori >> x >> y;
+            if ()
                 vert = true;
-            else if (toupper(input.at(0)) == 'H')
+            else if ()
                 vert = false;
             else
                 continue;
