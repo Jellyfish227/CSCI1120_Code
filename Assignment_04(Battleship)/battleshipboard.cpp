@@ -7,7 +7,6 @@
 #include <cctype>
 #include "battleshipboard.h"
 /* You may add extra standard library headers if you see fit */
-#include <string>
 
 using namespace std;
 
@@ -196,23 +195,35 @@ bool getComputerMove(char board[][N], int& y, int& x) {
 
 // Place ship on board in specified orientation (vertical or horizontal)
 bool placeShip(char board[][N], int y, int x, char ship, bool vertical = false) {
-    int lenShip = SHIP_SIZE[indexOf(ship)];
+    int shipLen = SHIP_SIZE[indexOf(ship)];
+    bool pathClear;
     if (!vertical) {
-        if (isValidCell(y, x + lenShip)) {
-            for (int i = 0; i < lenShip; i++) {
+        for (int i = 0; i < shipLen; i++) {
+            if (board[y][x + i] != BLANK || isValidCell(y, x + i)){
+                pathClear = false;
+            }
+        }
+        if (pathClear) {
+            for (int i = 0; i < shipLen; i++) {
                 board[y][x + i] = ship;
             }
             return true;
         }
     }
     else {
-        if (isValidCell(y + lenShip, x)) {
-            for (int i = 0; i < lenShip; i++) {
+        for (int i = 0; i < shipLen; i++) {
+            if (board[y + i][x] != BLANK || isValidCell(y, x + i)){
+                pathClear = false;
+            }
+        }
+        if (pathClear) {
+            for (int i = 0; i < shipLen; i++) {
                 board[y + i][x] = ship;
             }
         }
         return true;
     }
+    cout << "Invalid ship location! " << endl;
     return false;
 }
 
@@ -236,29 +247,31 @@ void manuallyPlaceShips(char board[][N]) {
     for (int k = 0; k < 5; k++) {
         char ship = SHIP_TYPE[k][0];
         while (true) {
-            char ori, x; int y;
-            bool vert;
+            char ori;
+            int y, x;
+            bool vertical;
+
             cout << "Enter h/v and location for " << SHIP_TYPE[k] << ": ";
-            cin >> ori >> x >> y;
-            ori = toupper(ori);
-            if ('V' == ori) 
-                vert = true;
-            else if ('H' == ori) 
-                vert = false;
-            else
-                continue;
-            x = toupper(x);
-            if ()
-            {
-                /* code */
-            }
+            cin >> ori;
+            getCellFromConsole(y, x);
             
-        }
-        
-    }
-    
-    //clear input buffer
-    
+            ori = toupper(ori);
+            if ('V' == ori) {
+                vertical = true;
+                break;
+            }
+            else if ('H' == ori) {
+                vertical = false;
+                break;
+            }
+            else {
+                cout << "Invalid ship location! " << endl;
+                continue;
+            }
+            if (placeShip(board, y, x, ship, vertical)) 
+                break;
+        }  
+    }   
 }
 
 /*  prompt input of yes an no

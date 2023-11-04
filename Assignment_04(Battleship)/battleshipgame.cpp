@@ -73,6 +73,14 @@ int main() {
             // check if all opponent ships have sunk
             // (if so, set winner and game over flag to leave the loop)
             // TODO: Add your code
+            int sunkCount = 0;
+            for (int i = 0; i < 5; i++){
+                if (0 == opponent->alive[i]){
+                    sunkCount++;
+                }
+            }
+            gameOver = sunkCount == 5;
+            winner = gameOver ? attacker->name : "";
         }
 
         // swap the player's turn
@@ -83,5 +91,7 @@ int main() {
 
     // print final gameboards, game over message and the winner
     // TODO: Add your code
-
+    printBoards(enBoard, myBoard, false);
+    cout << "Game over! " << endl;
+    cout << winner << " fleet wins! " << endl;
 }
