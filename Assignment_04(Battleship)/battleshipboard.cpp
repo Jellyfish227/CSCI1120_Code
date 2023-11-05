@@ -48,43 +48,42 @@ void printBoards(char board1[][N], char board2[][N], bool gameMode) {
 
     // print row indexes and board content for both game boards
     if (!gameMode){
-        for(int i = 1; i < N; i++) {
+        for(int y = 1; y <= N; y++) {
             //Enemy board
-            cout << setw(2) << i << right;
-            for (int j = 0; j < N; j++){
-                cout << setw(2) << board1[i - 1][j] << right;
+            cout << setw(2) << y << right;
+            for (int x = 0; x < N; x++){
+                cout << setw(2) << board1[y - 1][x] << right;
             }
             cout << "  ";
             //My board
-            cout << setw(2) << i << right;
-            for (int j = 0; j < N; j++){
-                cout << setw(2) << board2[i - 1][j] << right;
+            cout << setw(2) << y << right;
+            for (int x = 0; x < N; x++){
+                cout << setw(2) << board2[y - 1][x] << right;
             }
             cout << endl;
         }
     }
     else {
-        for(int i = 1; i < N; i++) {
+        for(int y = 1; y <= N; y++) {
             //enemy board, either HIT/MISS/BLANK
-            cout << setw(2) << i << right;
-            for (int j = 0; j < N; j++){
+            cout << setw(2) << y << right;
+            for (int x = 0; x < N; x++){
                 cout << setw(2) << right;
-                if (board1[i - 1][j] != HIT || board1[i - 1][j] != MISS) {
+                if (board1[y - 1][x] != HIT && board1[y - 1][x] != MISS) {
                     cout << BLANK;
                 }
                 else {
-                    cout << board1[i - 1][j];
+                    cout << board1[y - 1][x];
                 }
             }
             cout << "  ";
             //My board, remain same
-            cout << setw(2) << i << right;
-            for (int j = 0; j < N; j++){
-                cout << setw(2) << board2[i - 1][j] << right;
+            cout << setw(2) << y << right;
+            for (int x = 0; x < N; x++){
+                cout << setw(2) << board2[y - 1][x] << right;
             }
             cout << endl;
         }
-        
     }
 }
 
@@ -131,6 +130,7 @@ bool shoot(char board[][N], int y, int x, Fleet* fleet) {
         board[y][x] = HIT;
         return true;
     }
+    board[y][x] = MISS;
     return false;
 }
 
@@ -146,11 +146,12 @@ bool getCellFromConsole(int& y, int& x) {
 
     col = tolower(col) - 'a';
     row -= 1;
-    if(isValidCell(col,row)) {
+    if(isValidCell(row,col)) {
         y = row;
         x = col;
+        return true;
     }
-    return true;
+    return false;
 }
 
 // Get a random location (y, x) within board size
@@ -196,35 +197,28 @@ bool getComputerMove(char board[][N], int& y, int& x) {
 // Place ship on board in specified orientation (vertical or horizontal)
 bool placeShip(char board[][N], int y, int x, char ship, bool vertical = false) {
     int shipLen = SHIP_SIZE[indexOf(ship)];
-    bool pathClear;
     if (!vertical) {
         for (int i = 0; i < shipLen; i++) {
-            if (board[y][x + i] != BLANK || isValidCell(y, x + i)){
-                pathClear = false;
+            if (board[y][x + i] != BLANK || !isValidCell(y, x + i)){
+                return false;
             }
         }
-        if (pathClear) {
-            for (int i = 0; i < shipLen; i++) {
-                board[y][x + i] = ship;
-            }
-            return true;
-        }
-    }
-    else {
         for (int i = 0; i < shipLen; i++) {
-            if (board[y + i][x] != BLANK || isValidCell(y, x + i)){
-                pathClear = false;
-            }
-        }
-        if (pathClear) {
-            for (int i = 0; i < shipLen; i++) {
-                board[y + i][x] = ship;
-            }
+            board[y][x + i] = ship;
         }
         return true;
     }
-    cout << "Invalid ship location! " << endl;
-    return false;
+    else {
+        for (int i = 0; i < shipLen; i++) {
+            if (board[y + i][x] != BLANK || !isValidCell(y + i, x)){
+                return false;
+            }
+        }
+        for (int i = 0; i < shipLen; i++) {
+            board[y + i][x] = ship;
+        }
+        return true;
+    }
 }
 
 // Randomly place all ships on board
@@ -253,22 +247,27 @@ void manuallyPlaceShips(char board[][N]) {
 
             cout << "Enter h/v and location for " << SHIP_TYPE[k] << ": ";
             cin >> ori;
-            getCellFromConsole(y, x);
+            if (!getCellFromConsole(y, x)) {
+                cout << "Invalid ship location! " << endl;
+                continue;
+            }
             
             ori = toupper(ori);
             if ('V' == ori) {
                 vertical = true;
-                break;
             }
             else if ('H' == ori) {
                 vertical = false;
-                break;
             }
             else {
                 cout << "Invalid ship location! " << endl;
                 continue;
             }
-            if (placeShip(board, y, x, ship, vertical)) 
+            if (!placeShip(board, y, x, ship, vertical)) {
+                cout << "Invalid ship location! " << endl;
+                continue;
+            }
+            else
                 break;
         }  
     }   
@@ -278,21 +277,16 @@ void manuallyPlaceShips(char board[][N]) {
     @param  &output: pass value to variable 
     @param  prompt: string output prompt */
 void inputYesNo(bool& output, string prompt){
-    int input;
+    char input;
     while(true) {
         cout << prompt; 
         cin >> input;
         input = toupper(input);
-        switch (input) {
-            case 'Y':
-                output = true;
-                break;
-            case 'N':
-                output = false;
-                break;
-            default:
-                cout << "Invalid. " << endl;
-                continue;
+        if (input == 'Y') {
+            output = true;
+        }
+        else {
+            output = false;
         }
         break;
     }

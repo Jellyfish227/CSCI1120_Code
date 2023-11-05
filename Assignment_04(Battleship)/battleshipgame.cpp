@@ -5,7 +5,7 @@
 #include <iostream>
 #include "battleshipboard.h"
 /* You may add extra standard library headers if you see fit */
-#include <ctype.h>
+//#include <ctype.h>
 
 using namespace std;
 
@@ -67,6 +67,7 @@ int main() {
                 break;
         }
 
+
         // carry out the shoot
         bool hit = shoot(attacker == &myFleet ? enBoard : myBoard, y, x, opponent);
         if (hit) {
@@ -92,6 +93,7 @@ int main() {
     // print final gameboards, game over message and the winner
     // TODO: Add your code
     printBoards(enBoard, myBoard, false);
+    printStatus(enFleet, myFleet);
     cout << "Game over! " << endl;
     cout << winner << " fleet wins! " << endl;
 }

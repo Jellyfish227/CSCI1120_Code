@@ -9,7 +9,7 @@
 using std::string;
 
 // Global constants
-const int N = 8;             // board size
+const int N = 7;             // board size
 const char HIT = 'X';        // hit
 const char MISS = 'O';       // miss
 const char BLANK = '.';      // empty cell
