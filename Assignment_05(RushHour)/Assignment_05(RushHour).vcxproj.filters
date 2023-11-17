@@ -18,6 +18,9 @@
     <ClCompile Include="Assignment_05(RushHour).cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="playgame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RushHour.h">

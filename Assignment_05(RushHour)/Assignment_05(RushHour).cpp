@@ -1,20 +1,48 @@
-// Assignment_05(RushHour).cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include "RushHour.h"
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+RushHour::RushHour(std::string g[]) : totalSteps(0) {
+	grid[0].assign(8, '#');
+	grid[7].assign(8, '#');
+	for (int i = 0; i < 8; i++) {
+		grid[i+1] = g[i];
+	}
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+bool RushHour::locateCar(int car, int& row, int& col) const {
+	return false;
+}
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+int RushHour::moveCar(int car, int step) {
+	return 0;
+}
+
+bool RushHour::isSolved() const {
+	return false;
+}
+
+int RushHour::getTotalSteps() const {
+	return totalSteps;
+}
+
+void RushHour::print() const {
+	for (string row : grid) {
+		cout << row << endl;
+	}
+	cout << "Steps: " << getTotalSteps() << endl;
+}
+
+int main() {
+	string g[8];
+
+	for (int i = 0; i < 6; i++) {
+		char temp[9];
+		cin >> temp;
+		g[i] = (string)temp;
+	}
+
+	RushHour rushHour(g);
+	rushHour.print();
+	return 0;
+}

@@ -3,42 +3,15 @@
 
 #include <iostream>
 #include <iomanip>
+#include <string>
 using namespace std;
 
-void inputYesNo(bool& output, string prompt) {
-    char input;
-    while (true) {
-        cout << prompt;
-        cin >> input;
-        input = toupper(input);
-        switch (input) {
-            case 'Y':
-                output = true;
-                break;
-            case 'N':
-                output = false;
-                break;
-            default:
-                cout << "Invalid. " << endl;
-                continue;
-        }
-        break;
-    }
-}
 
 int main()
 {
-	/*char ori, x;
-	int y;
-
-	cin >> ori >> x >> y;
-	cout << ori << endl << x << endl << y << endl;*/
-
-    bool output;
-
-    inputYesNo(output, "Y/N: ");
-    cout << boolalpha;
-    cout << output;
+	string str1(8, 'a');
+	string str2(str1);
+	cout << str1 << endl << str2;
 	return 0;
 }
 
