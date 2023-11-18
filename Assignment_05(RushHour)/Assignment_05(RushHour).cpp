@@ -34,7 +34,7 @@ void RushHour::print() const {
 }
 
 int main() {
-	string g[8];
+	string g[6];
 
 	for (int i = 0; i < 6; i++) {
 		char temp[9];
