@@ -5,7 +5,7 @@ using namespace std;
 RushHour::RushHour(std::string g[]) : totalSteps(0) {
 	grid[0].assign(8, '#');
 	grid[7].assign(8, '#');
-	for (int i = 0; i < 8; i++) {
+	for (int i = 0; i < 6; i++) {
 		grid[i+1] = g[i];
 	}
 }
