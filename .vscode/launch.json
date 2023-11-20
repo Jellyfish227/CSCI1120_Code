@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/jellyfish/Documents/Year_2/CSCI1120_Code/Assignment_04(Battleship)",
-      "program": "/Users/jellyfish/Documents/Year_2/CSCI1120_Code/Assignment_04(Battleship)/build/Debug/outDebug"
+      "cwd": "/Users/jellyfish/Documents/Year_2/CSCI1120_Code/Assignment_05(RushHour)",
+      "program": "/Users/jellyfish/Documents/Year_2/CSCI1120_Code/Assignment_05(RushHour)/build/Debug/outDebug"
     }
   ]
 }

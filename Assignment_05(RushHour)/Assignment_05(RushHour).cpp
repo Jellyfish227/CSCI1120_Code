@@ -34,12 +34,10 @@ void RushHour::print() const {
 }
 
 int main() {
-	string g[8];
+	string g[6];
 
 	for (int i = 0; i < 6; i++) {
-		char temp[9];
-		cin >> temp;
-		g[i] = (string)temp;
+		cin >> g[i];
 	}
 
 	RushHour rushHour(g);
