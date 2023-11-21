@@ -7,28 +7,20 @@
 using namespace std;
 
 
-int main(){
-	int step;
-	cin >> step;
-	
+int main(int step){
+	//static int temp = -1;
+	//if (-1 == temp)	 // ifndef temp //recursion guard
+	//	temp = step; // define temp = step
+	step = 3;
 
-	
-}
-
-int foo(int step) {
-	static int temp = -1;
-	if (-1 == temp)	 // ifndef temp //recursion guard
-		temp = step; // define temp = step
-	
-	if (step == 0)
+	while (step != 0)
 	{
-		return 0;
+		main(step - 1);
 	}
-	
-	cout << temp << " : " << step << endl;
-	foo(step - 1);
-	
+
+	cout << step << endl;
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
