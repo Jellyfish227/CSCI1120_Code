@@ -6,22 +6,23 @@
 #include <string>
 using namespace std;
 
-int foo(int step){
-	static int temp = -1;
-	if (-1 == temp)	 // ifndef temp //recursion guard
-		temp = step; // define temp = step
-	
-	cout << temp << " : " << step << endl;
-	if (step > 0) {
-		foo(step - 1);
-	} else
-		return 0;
-}
+int moveCar(int step);
 
 int main(){
-	foo(4);
+	moveCar(5);
 }
 
+int moveCar(int step) {
+	static int move = 0;
+	cout << move << endl;
+	if (step > 0) {
+		move++;
+		return moveCar(step - 1);
+	}
+	else if (0 == step) {
+		return 0;
+	}
+}
 
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

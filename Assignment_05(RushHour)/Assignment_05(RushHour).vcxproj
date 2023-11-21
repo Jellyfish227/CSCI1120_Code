@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Assignment_05(RushHour).cpp" />
+    <ClCompile Include="RushHour.cpp" />
     <ClCompile Include="playgame.cpp" />
   </ItemGroup>
   <ItemGroup>
