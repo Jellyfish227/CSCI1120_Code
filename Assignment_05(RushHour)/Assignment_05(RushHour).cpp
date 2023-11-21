@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 #include "RushHour.h"
 using namespace std;
 
@@ -42,20 +43,17 @@ int RushHour::moveCar(int car, int step) { //positive = down or right; negative 
 	/* return 0 = valid
 		return 1 = car not exist or step is zero
 		return 2 = hit other cars or border or go beyond the exit zone */
-	static int temp = -1;
-	if (-1 == temp) //ifndef temp //recursion guard
+	static int temp = -9;
+	if (-9 == temp) //ifndef temp //recursion guard
 		temp = step; //define temp = step
-	
 	int row = 0; int col = 0;
 	
-
 	//moveCar() return value
-	if (locateCar(car, row, col) 
-		&& temp != 0
-		&& moveCar(car, step - 1) == 0) {
-		
+	if (0 == temp || !locateCar(car, row, col)){
+		return 1;
+	} else {
 		//check orientation
-		bool isHorizontal = false;
+		static bool isHorizontal = false;
 		if (grid[row][col] == grid[row][col + 1]) {
 			isHorizontal = true;
 		} else if (grid[row][col] == grid[row + 1][col]) {
@@ -63,36 +61,89 @@ int RushHour::moveCar(int car, int step) { //positive = down or right; negative 
 		}
 
 		if (isHorizontal) {
-			if (step > 0) {
+			if (temp > 0) {
 				while (grid[row][col + 1] == grid[row][col]){
-					col++;
+					col++; //trasverse to the last cell
 				}
-				if (grid[row][col + step] == '.'){
-					if (step == temp)
+				if (grid[row][col + step] == '.')
+				{
+					if (step > 0)
 					{
-						/* code */
+						return moveCar(car, step - 1);
 					}
-					
+					else
+						totalSteps += temp;
+					temp = -9;
 					return 0;
-				} else 
+				}
+				else
+				{
+					temp = -9;
 					return 2;
-			} else { //
-
+				}
+			} else {
+				if (grid[row][col + step] == '.')
+				{
+					if (step < 0)
+					{
+						return moveCar(car, step + 1);
+					}
+					else
+						totalSteps += abs(temp);
+					temp = -9;
+					return 0;
+				}
+				else
+				{
+					temp = -9;
+					return 2;
+				}
 			}
-			
-			
+		} else {
+			if (temp > 0)
+			{
+				while (grid[row + 1][col] == grid[row][col])
+				{
+					row++; // trasverse to the last cell
+				}
+				if (grid[row + step][col] == '.')
+				{
+					if (step > 0)
+					{
+						return moveCar(car, step - 1);
+					}
+					else
+						totalSteps += temp;
+					temp = -9;
+					return 0;
+				}
+				else
+				{
+					temp = -9;
+					return 2;
+				}
+			}
+			else
+			{
+				if (grid[row + step][col] == '.')
+				{
+					if (step < 0)
+					{
+						return moveCar(car, step + 1);
+					}
+					else
+						totalSteps += abs(temp);
+					temp = -9;
+					return 0;
+				}
+				else
+				{
+					temp = -9;
+					return 2;
+				}
+			}
 		}
-		
-		
-		
-		return 0;
-	} else if (0 == temp || !locateCar(car, row, col)) {
-		return 1;
-	} else if (true) {
-		return 2;
 	}
-
-	return 0; //recursion endpoint
 }
 
 bool RushHour::isSolved() const {
