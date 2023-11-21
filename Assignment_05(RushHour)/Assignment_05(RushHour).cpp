@@ -18,13 +18,12 @@ bool RushHour::locateCar(int car, int& row, int& col) const {
 	for (int y = 1; y <= 6; y++) {
 		for (int x = 1; x <= 6; x++) {
 			if (isSpotted &&
-				grid[y][x] == grid[y][tempx] && //Horizontal case
-				grid[y][x] == grid[tempy][x]) { //Vertical case
+				(grid[y][x] == grid[y][tempx] || //Horizontal case
+				grid[y][x] == grid[tempy][x])) { //Vertical case
 				row = tempy;
 				col = tempx;
 				return true;
-			}
-			if (car == grid[y][x]) {
+			} else if (car == (grid[y][x] - '0')) {
 				tempy = y;
 				tempx = x;
 				isSpotted = true;
@@ -40,7 +39,7 @@ int RushHour::moveCar(int car, int step) { //positive = down or right; negative 
 	//1. car exist in the grid by locateCar(), determin move left/right/up/down
 	//2. Steps != 0
 	//3. Enough space to move by step tiles without hitting, check valid or not each case
-	/* return 0 = valid
+	/*  return 0 = valid
 		return 1 = car not exist or step is zero
 		return 2 = hit other cars or border or go beyond the exit zone */
 	static int temp = -9;
@@ -60,84 +59,61 @@ int RushHour::moveCar(int car, int step) { //positive = down or right; negative 
 			isHorizontal = false;
 		}
 
-		if (isHorizontal) {
-			if (temp > 0) {
+		if (isHorizontal) { //horizontal
+			if (temp > 0) { //positive moving right
 				while (grid[row][col + 1] == grid[row][col]){
-					col++; //trasverse to the last cell
+					col++; 
 				}
 				if (grid[row][col + step] == '.')
-				{
-					if (step > 0)
-					{
-						return moveCar(car, step - 1);
-					}
-					else
-						totalSteps += temp;
+					return moveCar(car, step - 1);
+				else if (grid[row][col + step] == grid[row][col]) {
+					totalSteps += temp;
 					temp = -9;
 					return 0;
 				}
-				else
-				{
+				else {
 					temp = -9;
 					return 2;
 				}
-			} else {
+			} else { //negative moving left
 				if (grid[row][col + step] == '.')
-				{
-					if (step < 0)
-					{
-						return moveCar(car, step + 1);
-					}
-					else
-						totalSteps += abs(temp);
+					return moveCar(car, step + 1);
+				else if (grid[row][col + step] == grid[row][col]) {
+					totalSteps += abs(temp);
 					temp = -9;
 					return 0;
 				}
-				else
-				{
+				else {
 					temp = -9;
 					return 2;
 				}
 			}
-		} else {
-			if (temp > 0)
-			{
-				while (grid[row + 1][col] == grid[row][col])
-				{
-					row++; // trasverse to the last cell
+		} else { //vertical
+			if (temp > 0) { //positive moving down
+				while (grid[row + 1][col] == grid[row][col]) {
+					row++; 
 				}
-				if (grid[row + step][col] == '.')
-				{
-					if (step > 0)
-					{
-						return moveCar(car, step - 1);
-					}
-					else
-						totalSteps += temp;
+				if (grid[row + step][col] == '.') 
+					return moveCar(car, step - 1);
+				else if (grid[row + step][col] == grid[row][col]) {
+					totalSteps += temp;
 					temp = -9;
 					return 0;
 				}
-				else
-				{
+				else {
 					temp = -9;
 					return 2;
 				}
 			}
-			else
-			{
-				if (grid[row + step][col] == '.')
-				{
-					if (step < 0)
-					{
-						return moveCar(car, step + 1);
-					}
-					else
-						totalSteps += abs(temp);
-					temp = -9;
-					return 0;
+			else { //negative moving up
+				if (grid[row + step][col] == '.') 
+					return moveCar(car, step + 1);
+				else if (grid[row + step][col] == grid[row][col]) {
+					totalSteps += abs(temp); 
+					temp = -9; 
+					return 0; 
 				}
-				else
-				{
+				else {
 					temp = -9;
 					return 2;
 				}
@@ -167,11 +143,28 @@ void RushHour::print() const {
 //test main
 //TODO: Remove upon finish
 int main() {
-	string g[6];
-	for (int i = 0; i < 6; i++) {
-		cin >> g[i];
-	}
-	RushHour rushHour(g);
-	rushHour.print();
+	string g[6] = {"#11...2#", "#3..4.2#", "#3004.2.", "#3..4..#", "#5...66#", "#5.777.#"};
+    RushHour rh(g);
+	rh.print();
+    while(!rh.isSolved()){
+        int car; int step;
+        cout << "Move a car: ";
+        cin >> car >> step;
+        
+        switch (rh.moveCar(car, step)){
+            case 0:
+                break;
+            case 1:
+                cout << "Invalid car or step! Try again. " << endl;
+                continue;
+            case 2:
+                cout << "Hit! Try again. " << endl;
+                continue;
+        }
+
+        rh.print();
+    }
+    rh.print();
+    cout << "Congrats! You finished in 17 steps. " << endl;
 	return 0;
 }

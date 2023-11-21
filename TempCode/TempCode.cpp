@@ -19,8 +19,6 @@ int foo(int step){
 }
 
 int main(){
-	
-	
 	foo(4);
 }
 
