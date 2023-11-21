@@ -7,12 +7,27 @@
 using namespace std;
 
 
-int main()
-{
-	string str1(8, 'a');
-	string str2(str1);
-	cout << str1 << endl << str2;
-	return 0;
+int main(){
+	int step;
+	cin >> step;
+	
+
+	
+}
+
+int foo(int step) {
+	static int temp = -1;
+	if (-1 == temp)	 // ifndef temp //recursion guard
+		temp = step; // define temp = step
+	
+	if (step == 0)
+	{
+		return 0;
+	}
+	
+	cout << temp << " : " << step << endl;
+	foo(step - 1);
+	
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

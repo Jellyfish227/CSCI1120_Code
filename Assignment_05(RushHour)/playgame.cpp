@@ -15,4 +15,5 @@ int const N = 8;
 //	RushHour rH(g);
 //	rH.print();
 //	return 0;
+//  include lines to determine the return value of moveCar() and cout corresponding error messages
 //}
