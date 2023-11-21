@@ -46,23 +46,23 @@ int RushHour::moveCar(int car, int step) { //positive = down or right; negative 
 	if (-1 == temp) //ifndef temp //recursion guard
 		temp = step; //define temp = step
 	
-	int beginRow = 0; int beginCol = 0;
 	int row = 0; int col = 0;
 	
 
 	//moveCar() return value
-	if (locateCar(car, beginRow, beginCol) 
+	if (locateCar(car, row, col) 
 		&& temp != 0
 		&& moveCar(car, step - 1) == 0) {
+		
 		//check orientation
 		bool isHorizontal = false;
-		if (grid[beginRow][beginCol] == grid[beginRow][beginCol + 1]) {
+		if (grid[row][col] == grid[row][col + 1]) {
 			isHorizontal = true;
-		} else if (grid[beginRow][beginCol] == grid[beginRow + 1][beginCol]) {
+		} else if (grid[row][col] == grid[row + 1][col]) {
 			isHorizontal = false;
 		}
+
 		if (isHorizontal) {
-			row = beginRow; col = beginCol;
 			if (step > 0) {
 				while (grid[row][col + 1] == grid[row][col]){
 					col++;
@@ -86,7 +86,7 @@ int RushHour::moveCar(int car, int step) { //positive = down or right; negative 
 		
 		
 		return 0;
-	} else if (0 == temp || !locateCar(car, beginRow, beginCol)) {
+	} else if (0 == temp || !locateCar(car, row, col)) {
 		return 1;
 	} else if (true) {
 		return 2;

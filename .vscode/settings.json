@@ -58,6 +58,7 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "ios": "cpp",
-    "iomanip": "cpp"
+    "iomanip": "cpp",
+    "ostream": "cpp"
   }
 }

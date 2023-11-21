@@ -6,20 +6,24 @@
 #include <string>
 using namespace std;
 
-
-int main(int step){
-	//static int temp = -1;
-	//if (-1 == temp)	 // ifndef temp //recursion guard
-	//	temp = step; // define temp = step
-	step = 3;
-
-	while (step != 0)
-	{
-		main(step - 1);
-	}
-
-	cout << step << endl;
+int foo(int step){
+	static int temp = -1;
+	if (-1 == temp)	 // ifndef temp //recursion guard
+		temp = step; // define temp = step
+	
+	cout << temp << " : " << step << endl;
+	if (step > 0) {
+		foo(step - 1);
+	} else
+		return 0;
 }
+
+int main(){
+	
+	
+	foo(4);
+}
+
 
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
