@@ -14,20 +14,23 @@ int main(){
     }
     
     RushHour rh(g);
-    while(!isGameover){
+    while(!rh.isSolved()){
         int car; int step;
-        print();
-        cout << "Enter car and steps: ";
+        rh.print();
+        cout << "Move a car: ";
         cin >> car >> step;
-        switch (moveCar(car, step))
+        
+        switch (rh.moveCar(car, step)){
             case 0:
                 break;
             case 1:
-                cout << "Car not exist or step is zero." << endl;
+                cout << "Invalid car or step! Try again. " << endl;
                 continue;
             case 2:
-                cout << "Hit wall or hit car or exeed the moving boundary" << endl;
+                cout << "Hit! Try again. " << endl;
                 continue;
+        }
     }
-    
+    rh.print();
+    cout << "Congrats! You finished in 17 steps. " << endl;
 }

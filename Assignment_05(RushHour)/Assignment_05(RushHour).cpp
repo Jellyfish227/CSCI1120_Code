@@ -147,7 +147,7 @@ int RushHour::moveCar(int car, int step) { //positive = down or right; negative 
 }
 
 bool RushHour::isSolved() const {
-	if (0 == grid[3][7]) {
+	if (0 == grid[3][6] && 0 == grid[3][7]) {
 		return true;
 	}
 	return false;
