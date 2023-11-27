@@ -6,22 +6,22 @@
 #include <string>
 using namespace std;
 
-const std::string ACTIONS[5] = {"Skip", "Reverse", "Draw 2", "Draw 4", "Change Color"};
-enum class Action : int
-{
-	Skip,
-	Reverse,
-	Draw2,
-	Draw4,
-	ChgColor
-};
+int arr[101] = {0};
 
 int main() {
-	Action action = Action::Skip;
+	int counter = 1;
+	for(int a : arr){
+		cout << setw(8) << left;
+		cout << a;
+		counter++;
+		if (counter == 10)
+		{
+			cout << endl;
+			counter = 0;
+		}
+		
+	}
 	
-	cout << ACTIONS[(int)action] << endl;
-
-	return 0;
 }
 
 
