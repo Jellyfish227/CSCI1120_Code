@@ -50,6 +50,9 @@
     <ClCompile Include="WildCard.cpp" />
     <ClCompile Include="WildDraw4.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="unoGameDebugLog.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
