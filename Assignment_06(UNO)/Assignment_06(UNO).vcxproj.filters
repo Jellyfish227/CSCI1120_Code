@@ -15,91 +15,91 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\ActionCard.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Bot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Card.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Deck.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\DiscardPile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Draw2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\DrawPile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Man.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Reverse.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Skip.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\unogame.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\WildCard.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\WildDraw4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="ActionCard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Card.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiscardPile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawPile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Man.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Reverse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Skip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Uno.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WildCard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WildDraw4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\ActionCard.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Bot.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Card.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Deck.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\DiscardPile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Draw2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\DrawPile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Man.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Reverse.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Skip.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Uno.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\WildCard.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\WildDraw4.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="ActionCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Card.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiscardPile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawPile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Man.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Reverse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Skip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unogame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WildCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WildDraw4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

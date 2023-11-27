@@ -18,6 +18,38 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActionCard.h" />
+    <ClInclude Include="Bot.h" />
+    <ClInclude Include="Card.h" />
+    <ClInclude Include="Deck.h" />
+    <ClInclude Include="DiscardPile.h" />
+    <ClInclude Include="Draw2.h" />
+    <ClInclude Include="DrawPile.h" />
+    <ClInclude Include="Man.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Reverse.h" />
+    <ClInclude Include="Skip.h" />
+    <ClInclude Include="Uno.h" />
+    <ClInclude Include="WildCard.h" />
+    <ClInclude Include="WildDraw4.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ActionCard.cpp" />
+    <ClCompile Include="Bot.cpp" />
+    <ClCompile Include="Card.cpp" />
+    <ClCompile Include="Deck.cpp" />
+    <ClCompile Include="DiscardPile.cpp" />
+    <ClCompile Include="Draw2.cpp" />
+    <ClCompile Include="DrawPile.cpp" />
+    <ClCompile Include="Man.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Reverse.cpp" />
+    <ClCompile Include="Skip.cpp" />
+    <ClCompile Include="unogame.cpp" />
+    <ClCompile Include="WildCard.cpp" />
+    <ClCompile Include="WildDraw4.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -126,38 +158,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\ActionCard.cpp" />
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Bot.cpp" />
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Card.cpp" />
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Deck.cpp" />
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\DiscardPile.cpp" />
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Draw2.cpp" />
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\DrawPile.cpp" />
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Man.cpp" />
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Player.cpp" />
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Reverse.cpp" />
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\Skip.cpp" />
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\unogame.cpp" />
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\WildCard.cpp" />
-    <ClCompile Include="Z:\Downloads\Uno-starter\Uno-starter\WildDraw4.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\ActionCard.h" />
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Bot.h" />
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Card.h" />
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Deck.h" />
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\DiscardPile.h" />
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Draw2.h" />
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\DrawPile.h" />
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Man.h" />
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Player.h" />
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Reverse.h" />
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Skip.h" />
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\Uno.h" />
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\WildCard.h" />
-    <ClInclude Include="Z:\Downloads\Uno-starter\Uno-starter\WildDraw4.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
