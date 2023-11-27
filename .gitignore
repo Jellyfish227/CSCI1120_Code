@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Assignment_06(UNO)/Assignment_06(UNO).vcxproj
+/Assignment_06(UNO)/Assignment_06(UNO).vcxproj.filters
