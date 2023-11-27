@@ -6,22 +6,22 @@
 #include <string>
 using namespace std;
 
-int moveCar(int step);
+const std::string ACTIONS[5] = {"Skip", "Reverse", "Draw 2", "Draw 4", "Change Color"};
+enum class Action : int
+{
+	Skip,
+	Reverse,
+	Draw2,
+	Draw4,
+	ChgColor
+};
 
-int main(){
-	moveCar(5);
-}
+int main() {
+	Action action = Action::Skip;
+	
+	cout << ACTIONS[(int)action] << endl;
 
-int moveCar(int step) {
-	static int move = 0;
-	cout << move << endl;
-	if (step > 0) {
-		move++;
-		return moveCar(step - 1);
-	}
-	else if (0 == step) {
-		return 0;
-	}
+	return 0;
 }
 
 
