@@ -3,17 +3,12 @@
 
 // TODO:
 // Define the Reverse class which inherits from ActionCard.
-class Reverse
+#include "ActionCard.h"
+class Reverse : public ActionCard
 {
-private:
-    Card card;
 public:
-    Reverse(Color c);
-    
+    Reverse();
+    virtual void play(GameState& uno) override;
 };
-
-Reverse::Reverse(Color c) {
-    this->card = Card(c, "reverse");
-}
 
 #endif // REVERSE_H
