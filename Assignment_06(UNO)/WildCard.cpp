@@ -1,7 +1,7 @@
 #include <iostream>
 #include "cctype"
 #include "WildCard.h"
-#include "WildDraw4.h"
+#include "WildDraw4.h" //why?
 #include "Bot.h"
 
 using namespace std;
@@ -11,9 +11,10 @@ WildCard::WildCard() : ActionCard(Color::Wild, Action::ChgColor) {
 }
 
 bool WildCard::match(Card* /* top */) {
-    // TODO:
+    // TODO: //done, REMOVE after test
     // Add one statement here to complete the color matching logic 
     // for this card type
+    return true;
 }
 
 void WildCard::play(GameState& uno) {
