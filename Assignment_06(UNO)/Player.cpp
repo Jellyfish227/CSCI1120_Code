@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Player.h"
 
+#include <algorithm>
+
 using namespace std;
 
 int Player::count = 0; 
@@ -30,10 +32,19 @@ int Player::drawCard(DrawPile* drawPile, int n) {
 }
 
 void Player::printHand(bool flipped) {
-    // TODO:
+    // TODO: //done, REMOVE after test
     // Print all cards in the player's hand in one line.
     // If flipped is true, print the front of each card, e.g. [R1], [GS], [WD]
     // Otherwise, print the back of each card, i.e., "[Uno]".
+
+    for (Card *c : hand) 
+    {
+        if (flipped) 
+            cout << c->toString();
+        else 
+            cout << "[Uno]";
+        if (c != hand.back()) cout << " ";
+    }
     cout << endl;
 }
 
@@ -42,14 +53,21 @@ int Player::handSize() const {
 }
 
 int Player::handPoints() const {
-    // TODO:
+    // TODO: //done, REMOVE after test
     // Compute and return the sum of values of all cards in hand 
+    int sum = 0;
+    for (Card *c : hand) {
+        sum += (int)c->getValue();
+    }
+    return sum;
 }
 
 void Player::playCard(int idx, GameState& uno) {
-    // TODO:
+    // TODO: //done, REMOVE after test
     // Locate the card at index idx and play it, 
     // i.e. call its play() function
+    Card *card = hand.at(idx);
+    card->play(uno);
 
     // Move the card from hand to discard pile
     uno.discardPile->stack(card);
@@ -57,10 +75,15 @@ void Player::playCard(int idx, GameState& uno) {
 }
 
 Color Player::mostFrequentColor() {
-    // TODO:
+    // TODO: //done, REMOVE after test
     // Return the color that appears most frequently in the hand.
     // Exclude wild (draw 4) cards in this search.
     // If more than one color are equally most frequent, select the color
     // to return in this order: Red, Yellow, Green, Blue.
+    int count[4] = {0,0,0,0};
+    for (Card *c : hand)
+        count[(int)c->getColor()]++;
+    int idx = max_element(count, count + 4) - count;
+    
+    return Color(idx);
 }
-
