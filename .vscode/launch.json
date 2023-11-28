@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/jellyfish/Documents/Year_2/CSCI1120_Code/Assignment_05(RushHour)",
-      "program": "/Users/jellyfish/Documents/Year_2/CSCI1120_Code/Assignment_05(RushHour)/build/Debug/outDebug"
+      "cwd": "/Users/jellyfish/Documents/Year_2/CSCI1120_Code/Assignment_06(UNO)",
+      "program": "/Users/jellyfish/Documents/Year_2/CSCI1120_Code/Assignment_06(UNO)/build/Debug/outDebug"
     }
   ]
 }

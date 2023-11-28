@@ -59,6 +59,7 @@
   "files.associations": {
     "ios": "cpp",
     "iomanip": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "string": "cpp"
   }
 }

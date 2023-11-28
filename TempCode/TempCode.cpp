@@ -6,22 +6,22 @@
 #include <string>
 using namespace std;
 
-int moveCar(int step);
+int arr[101] = {0};
 
-int main(){
-	moveCar(5);
-}
-
-int moveCar(int step) {
-	static int move = 0;
-	cout << move << endl;
-	if (step > 0) {
-		move++;
-		return moveCar(step - 1);
+int main() {
+	int counter = 1;
+	for(int a : arr){
+		cout << setw(8) << left;
+		cout << a;
+		counter++;
+		if (counter == 10)
+		{
+			cout << endl;
+			counter = 0;
+		}
+		
 	}
-	else if (0 == step) {
-		return 0;
-	}
+	
 }
 
 
