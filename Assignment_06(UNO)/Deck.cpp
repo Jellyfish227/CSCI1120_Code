@@ -35,4 +35,10 @@ void Deck::print() {
     // TODO: 
     // Print the string representations and their value points of 
     // all cards of the deck. List at most 10 cards per line.
+    for (int i = 0; i < 10; i++) {
+        cout << setw(8) << left;
+        cards.at(i)->toString();
+        cout << "=" << int(cards.at(i)->getValue());
+    }
+    
 }
