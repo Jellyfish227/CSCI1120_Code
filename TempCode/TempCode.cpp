@@ -9,7 +9,7 @@ using namespace std;
 int arr[101] = {0};
 
 int main() {
-	int counter = 1;
+	int counter = 0;
 	for(int a : arr){
 		cout << setw(8) << left;
 		cout << a;
@@ -19,9 +19,7 @@ int main() {
 			cout << endl;
 			counter = 0;
 		}
-		
 	}
-	
 }
 
 
