@@ -1,25 +1,19 @@
-// TempCode.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Name:       Yu Ching Hei
+// Student ID: 1155193237
+// Email:      chyu@link.cuhk.edu.hk
 
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <algorithm>
 using namespace std;
 
-int arr[101] = {0};
-
 int main() {
-	int counter = 0;
-	for(int a : arr){
-		cout << setw(8) << left;
-		cout << a;
-		counter++;
-		if (counter == 10)
-		{
-			cout << endl;
-			counter = 0;
-		}
-	}
+	int arr[4] = {1,9,2,8};
+	cout << max_element(arr,arr+4) << endl;
+	cout << arr << endl;
+	int idx = max_element(arr,arr+4) - arr;
+	cout << idx;
 }
 
 
