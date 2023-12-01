@@ -1,7 +1,7 @@
 #ifndef BOT_H
 #define BOT_H
 
-// TODO:
+// TODO: //done, REMOVE after test
 // Define the Bot class which inherits from Player.
 #include "Player.h"
 int const ZERO = 0;
