@@ -1,6 +1,32 @@
-// TODO:
+// TODO: //done, REMOVE after test
 // Implement the Bot class
+#include <iostream>
+#include "Bot.h"
 
+using namespace std;
+
+Bot::Bot() : Player(){
+    setName(getName() + " (Bot)");
+}
+
+int Bot::pickCard(GameState &uno){
+    printHand();
+    for (int i = 0; i < handSize(); i++)
+    {
+        if (hand.at(i)->match(uno.discardPile->top()))
+            return i; 
+    }
+
+    if (uno.drawPile->size() != 0)
+    {
+        uno.drawPile->draw(hand);
+        if (uno.debugMode)
+            cout << "Drawn [" + hand.at(hand.size() - 1)->toString() + "]" << endl;
+        if (hand.back() == uno.discardPile->top())
+            return handSize() - 1;
+        return DRAWN;
+    }
+}
 // For the pickCard method, perform the following:
 // (1) show the hand in a hidden manner, i.e., print each card as [Uno], 
 //     if debugMode is false. 
