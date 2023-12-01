@@ -1,0 +1,51 @@
+Enter seed (or hit Enter):
+Seed: 123
+Play in debug mode (Y/N)? n
+Debug mode: false
+Max. turns to play:
+Max. turns: 100
+Enter # man and bot players: 2 2
+#Men: 2; #Bots: 2
+Player 1 (Man) drawn 7 card(s).
+Player 2 (Man) drawn 7 card(s).
+Player 3 (Bot) drawn 7 card(s).
+Player 4 (Bot) drawn 7 card(s).
+=========================================================
+Turn 1:
+Discard Pile: [RR]  Current Color: Red     Draw Pile: 43
+---------------------------------------------------------
+Player 1 (Man):
+ [x][BS]  [x][B4]  [2][YR]  [3][WD]  [x][GS]  [x][B5]  [x][GS]  [D]raw
+Enter option: 0
+Invalid option!
+Enter option: 2
+Discarded [YR]
+=========================================================
+Turn 2:
+Discard Pile: [YR]  Current Color: Yellow  Draw Pile: 43
+---------------------------------------------------------
+Player 4 (Bot):
+[Uno] [Uno] [Uno] [Uno] [Uno] [Uno] [Uno]
+Discarded [Y5]
+=========================================================
+Turn 3:
+Discard Pile: [Y5]  Current Color: Yellow  Draw Pile: 43
+---------------------------------------------------------
+Player 3 (Bot):
+[Uno] [Uno] [Uno] [Uno] [Uno] [Uno] [Uno]
+Discarded [WD]
+Color changed to Yellow!
+=========================================================
+Turn 4:
+Discard Pile: [WD]  Current Color: Yellow  Draw Pile: 43
+---------------------------------------------------------
+Player 2 (Man):
+Player 2 (Man) drawn 4 card(s).
+Turn skipped!
+=========================================================
+Turn 5:
+Discard Pile: [WD]  Current Color: Yellow  Draw Pile: 39
+---------------------------------------------------------
+Player 1 (Man):
+ [x][BS]  [x][B4]  [2][WD]  [x][GS]  [x][B5]  [x][GS]  [D]raw
+Enter option:
