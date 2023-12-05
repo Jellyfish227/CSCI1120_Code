@@ -39,7 +39,7 @@ void Deck::print() {
     for (Card *c : cards) 
     {
         cout << setw(8) << left;
-        cout << c->toString() << "=" << c->getValue();
+        cout << c->toString() << "=" << (int)c->getValue();
         counter++;
         if (counter == 10)
         {

@@ -19,6 +19,7 @@ int Man::pickCard(GameState& uno) {
     // If the card cannot match the top of the discard pile, show 
     // "[x]" which means the card cannot be played.
     // Print at most 10 cards per line if there are many cards in hand.
+    
 
 
     // Show the [D]raw option if draw pile still has cards.

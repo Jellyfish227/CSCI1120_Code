@@ -10,7 +10,7 @@ class Bot : public Player
 {
 public:
     Bot();
-    virtual int pickCard(GameState &uno);
+    virtual int pickCard(GameState &uno) override;
 };
 
 

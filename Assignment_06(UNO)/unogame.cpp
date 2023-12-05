@@ -118,6 +118,11 @@ int main()
 		// Reset cardsToDraw and turnSkipped for clean state for next turn.
 
 		// Update the turn integer to let the next player become current.
+	while (true)
+	{
+		turn = (turn + delta + P) % P;
+
+	}
 	
 
 	// TODO:
