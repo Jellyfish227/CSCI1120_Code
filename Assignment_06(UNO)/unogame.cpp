@@ -76,8 +76,11 @@ int main()
 	};
 
 	// Shuffle the deck and deal cards to each player
-	drawPile.print();
-	cout << "-----" << endl;
+	if (debugMode)
+	{
+		cout << "Cards created:" << endl;
+		drawPile.print();
+	}
 	drawPile.shuffle();
 	for (int i = 0; i < P; i++) {
 		players[i]->drawCard(&drawPile, H);
@@ -88,7 +91,7 @@ int main()
 	drawPile.draw(firstCard, 1);
 	discardPile.stack(firstCard.at(0)); 
 	if (debugMode) {
-		cout << "Draw Pile:" << endl;
+		cout << "Draw pile after shuffling and dealing:" << endl;
 		drawPile.print();
 	}
 
