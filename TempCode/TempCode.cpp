@@ -9,11 +9,7 @@
 using namespace std;
 
 int main() {
-	int arr[4] = {1,9,2,8};
-	cout << max_element(arr,arr+4) << endl;
-	cout << arr << endl;
-	int idx = max_element(arr,arr+4) - arr;
-	cout << idx;
+	cout << string(57,'=') << endl;
 }
 
 

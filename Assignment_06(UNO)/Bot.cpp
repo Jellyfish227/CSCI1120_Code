@@ -25,7 +25,8 @@ int Bot::pickCard(GameState &uno){
         if (hand.back() == uno.discardPile->top())
             return handSize() - 1;
         return DRAWN;
-    }
+    } else
+        return PASSED;
 }
 // For the pickCard method, perform the following:
 // (1) show the hand in a hidden manner, i.e., print each card as [Uno], 

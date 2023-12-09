@@ -18,27 +18,27 @@ bool WildCard::match(Card* /* top */) {
 }
 
 void WildCard::play(GameState& uno) {
-    // TODO:
+    // TODO: //done, REMOVE after test
     // Check if the "this" pointer is aiming at a WildDraw4 object.
     // If not, call the superclass Card's play() function.
-    // (This check is to skip redundant superclass Card's play() call 
+    // (This check is to skip redundant superclass Card's play() call
     //  for WildDraw4 since it's been called in Draw2's play().)
     // Hint: use dynamic_cast<>().
     WildCard *card = dynamic_cast<WildDraw4*>(this);
     if (card == nullptr)
         Card::play(uno);
-    
-    // TODO:
+
+    // TODO: //done, REMOVE after test
     // Change color from Wild to the color selected by the player.
     // First, get the pointer to the current player via GameState struct.
     // Check if it points to a Bot object. Hint: use dynamic_cast<>().
     // If so, use the mostFrequentColor() function of the Player class
     // to select a color to change.
-    // Otherwise (i.e., for a Man object), prompt the user to enter a 
+    // Otherwise (i.e., for a Man object), prompt the user to enter a
     // single character, valid choice in [R, Y, G, B], to select a color
-    // to change. Show error message "Invalid option!" if the user input 
+    // to change. Show error message "Invalid option!" if the user input
     // is not one of the 4 letters.
-    // Set color of this card to the selected color. 
+    // Set color of this card to the selected color.
     Player *player = dynamic_cast<Bot*>(uno.players[*uno.turn]);
     if (player != nullptr) //isBot
         this->setColor(player->mostFrequentColor());
