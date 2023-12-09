@@ -7,7 +7,7 @@
 class Reverse : public ActionCard
 {
 public:
-    Reverse();
+    Reverse(Color c);
     virtual void play(GameState& uno) override;
 };
 

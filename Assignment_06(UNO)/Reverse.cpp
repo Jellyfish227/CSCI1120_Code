@@ -9,7 +9,7 @@
 
 using namespace std;
 
-Reverse::Reverse() : ActionCard(Color::Wild, Action::ChgColor) {
+Reverse::Reverse(Color c) : ActionCard(c, Action::Reverse) {
 }
 
 void Reverse::play(GameState& uno) {
