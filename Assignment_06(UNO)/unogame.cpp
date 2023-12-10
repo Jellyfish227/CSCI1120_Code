@@ -1,3 +1,7 @@
+// Name:       Yu Ching Hei
+// Student ID: 1155193237
+// Email:      chyu@link.cuhk.edu.hk
+
 #include <iostream>
 #include <string>
 #include <cctype>
@@ -104,9 +108,6 @@ int main()
 		bool haveValueToPass = false;
 		round++;
 
-		// TODO:  //done, REMOVE after test
-		// Print the "turn header" which shows discard pile's top card,
-		// current color and current size of draw pile.
 		cout << string(57,'=') << endl;
 		cout << "Turn " << round << ":" << endl;
 		cout << setw(20) << left;
@@ -116,19 +117,9 @@ int main()
 		cout << "Draw Pile: " << uno.drawPile->size() << endl;
 		cout << string(57,'-') << endl;
 
-		// Print the name of the current player.
-		// (Hint: you can use the turn integer to index the players array
-		//  to get a pointer to the current player.)
 		player = players[turn];
 		cout << player->getName() << ":" << endl;
 
-		// If cardsToDraw > 0, current player draws the required # cards.
-		// If turnSkipped is true, current player skips picking and playing
-		// a card in this turn.
-		// Otherwise, call the pickCard() method to get the index of a
-		// selected card in hand.
-		// Then call the playCard() method with the obtained index if it is
-		// not PASSED and not DRAWN.
 		int act = 0;
 		if (cardsToDraw > 0)
 			player->drawCard(uno.drawPile, cardsToDraw);
@@ -145,11 +136,7 @@ int main()
 		else
 			cout << "Turn skipped!" << endl;
 		
-		
-		// Check game over condition. Exit the game loop if either:
-		// (1) current player's hand has no cards.
-		// (2) all players consecutively passed their turns
-		//     (i.e., no one can play a card or draw).
+
 		if (0 == player->handSize() || turnsMax == round)
 		{
 			gameOver = true;
@@ -172,10 +159,6 @@ int main()
 		turn = (turn + delta + P) % P;
 	}
 
-	// TODO:  //done, REMOVE after test
-	// Print the game over message.
-	// List all players' hands and the sum of points of all cards in hand.
-	// Print the name of the winner.
 	cout << string(10,'*') << endl;
 	cout << "Game Over!" << endl;
 	cout << string(10, '*') << endl;

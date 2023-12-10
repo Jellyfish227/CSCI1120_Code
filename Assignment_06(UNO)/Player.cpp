@@ -1,3 +1,7 @@
+// Name:       Yu Ching Hei
+// Student ID: 1155193237
+// Email:      chyu@link.cuhk.edu.hk
+
 #include <iostream>
 #include "Player.h"
 
@@ -32,11 +36,6 @@ int Player::drawCard(DrawPile* drawPile, int n) {
 }
 
 void Player::printHand(bool flipped) {
-    // TODO: //done, REMOVE after test
-    // Print all cards in the player's hand in one line.
-    // If flipped is true, print the front of each card, e.g. [R1], [GS], [WD]
-    // Otherwise, print the back of each card, i.e., "[Uno]".
-
     for (Card *c : hand) 
     {
         if (flipped) 
@@ -53,8 +52,6 @@ int Player::handSize() const {
 }
 
 int Player::handPoints() const {
-    // TODO: //done, REMOVE after test
-    // Compute and return the sum of values of all cards in hand 
     int sum = 0;
     for (Card *c : hand) {
         sum += (int)c->getValue();
@@ -63,9 +60,6 @@ int Player::handPoints() const {
 }
 
 void Player::playCard(int idx, GameState& uno) {
-    // TODO: //done, REMOVE after test
-    // Locate the card at index idx and play it, 
-    // i.e. call its play() function
     Card *card = hand.at(idx);
     card->play(uno);
 
@@ -75,11 +69,6 @@ void Player::playCard(int idx, GameState& uno) {
 }
 
 Color Player::mostFrequentColor() {
-    // TODO: //done, REMOVE after test
-    // Return the color that appears most frequently in the hand.
-    // Exclude wild (draw 4) cards in this search.
-    // If more than one color are equally most frequent, select the color
-    // to return in this order: Red, Yellow, Green, Blue.
     int count[5] = {0,0,0,0,0};
     for (Card *c : hand)
         count[(int)c->getColor()]++;

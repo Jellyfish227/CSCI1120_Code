@@ -1,3 +1,7 @@
+// Name:       Yu Ching Hei
+// Student ID: 1155193237
+// Email:      chyu@link.cuhk.edu.hk
+
 #ifndef DRAW2_H
 #define DRAW2_H
 

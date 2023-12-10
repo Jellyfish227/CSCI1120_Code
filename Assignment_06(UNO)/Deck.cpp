@@ -1,3 +1,7 @@
+// Name:       Yu Ching Hei
+// Student ID: 1155193237
+// Email:      chyu@link.cuhk.edu.hk
+
 #include <iostream>
 #include <algorithm>
 #include <iomanip>
@@ -32,9 +36,6 @@ void Deck::shuffle() {
 }
 
 void Deck::print() {
-    // TODO: //done, REMOVE after test
-    // Print the string representations and their value points of 
-    // all cards of the deck. List at most 10 cards per line.
     int counter = 0;
     for (Card *c : cards) 
     {   

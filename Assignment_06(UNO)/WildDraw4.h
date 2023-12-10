@@ -1,3 +1,7 @@
+// Name:       Yu Ching Hei
+// Student ID: 1155193237
+// Email:      chyu@link.cuhk.edu.hk
+
 #ifndef WILDDRAW4_H
 #define WILDDRAW4_H
 #include "WildCard.h"
