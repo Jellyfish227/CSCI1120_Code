@@ -6,10 +6,29 @@
 #include <iomanip>
 #include <string>
 #include <algorithm>
+#include <sstream>
 using namespace std;
 
 int main() {
-	cout << string(57,'=') << endl;
+	string str = "Draw";
+	stringstream ss(str);
+
+	int num;
+	ss >> num;
+	if (!ss.fail())
+	{
+		cout << "isNum" << endl;
+		cout << num << endl;
+	}
+	else
+	{
+		char d;
+		ss.clear();
+		ss << str;
+		ss >> d;
+		cout << d;
+	}
+	
 }
 
 

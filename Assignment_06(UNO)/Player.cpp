@@ -80,7 +80,7 @@ Color Player::mostFrequentColor() {
     // Exclude wild (draw 4) cards in this search.
     // If more than one color are equally most frequent, select the color
     // to return in this order: Red, Yellow, Green, Blue.
-    int count[4] = {0,0,0,0};
+    int count[5] = {0,0,0,0,0};
     for (Card *c : hand)
         count[(int)c->getColor()]++;
     int idx = max_element(count, count + 4) - count;

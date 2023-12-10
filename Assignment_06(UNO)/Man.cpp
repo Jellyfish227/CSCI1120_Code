@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 // You may add additional headers if needed
+#include <sstream>
 
 #include "Man.h"
 
@@ -20,24 +21,37 @@ int Man::pickCard(GameState& uno) {
     // "[x]" which means the card cannot be played.
     // Print at most 10 cards per line if there are many cards in hand.
     bool haveMatch = false;
-    bool matchArr[10] = {false};
-    for (int i = 0; i < 10; i++)
+    int counter = 0;
+    vector<bool> matchArr(handSize(), false);
+    for (int i = 0; i < handSize(); i++)
     {
-        cout << setw(4) << right;
-        cout << "[";
+        string sel = "";
+        sel += "[";
         if (hand.at(i)->match(uno.discardPile->top()))
         {
-            cout << to_string(i);
+            sel += to_string(i);
             haveMatch = true;
-            matchArr[i] = true;
-        } else 
-            cout << "x";
-        cout << "]";
+            matchArr.at(i) = true;
+        }
+        else
+            sel += "x";
+        sel += "]";
+        cout << setw(4) << right << sel;
         cout << hand.at(i)->toString() << " ";
+        counter++;
+        if (counter == 10 || (uno.drawPile->size() == 0 && hand.at(i) == hand.back()))
+        {
+            cout << endl;
+            counter = 0;
+        }
+        // Show the [D]raw option if draw pile still has cards.
+        if (uno.drawPile->size() != 0 && hand.at(i) == hand.back())
+        {
+            cout << " [D]raw" << endl;
+        }
     }
 
-    // Show the [D]raw option if draw pile still has cards.
-    cout << " [D]raw" << endl;
+
 
     // You may make an early return with PASSED if no matched cards in hand 
     // and draw pile is empty.
@@ -57,18 +71,30 @@ int Man::pickCard(GameState& uno) {
     //
     while (true)
     {
-        char c;
+        string s;
         cout << "Enter option: ";
-        cin >> c;
-        if (c >= '0' && c <= '9' && matchArr[c - '0']) 
+        cin >> s;
+        stringstream ss(s);
+        
+        char inC = '\0';
+        int inNum = 0;
+        ss >> inNum;
+        if (!ss.fail())
         {
-            playCard(c - '0', uno);
-            return c - '0';
+            if (inNum >= 0 && inNum <= handSize() && matchArr.at(inNum))
+                return inNum;
         }
-        else if (c == 'd' || c == 'D')
+        else
+        {
+            ss.clear();
+            ss << s;
+            ss >> inC;
+        }
+        if (inC == 'd' || inC == 'D')
         {
             drawCard(uno.drawPile);
-            return hand.size() - 1;
+            cout << "Drawn " + hand.back()->toString() << endl;
+            return hand.back()->match(uno.discardPile->top()) ? handSize() - 1 : DRAWN;
         }
         else
             cout << "Invalid option! " << endl;

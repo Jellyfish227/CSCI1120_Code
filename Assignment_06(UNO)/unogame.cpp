@@ -97,10 +97,12 @@ int main()
 
 	// Start the game loop
 	int round = 0;
-	while (true)
+	bool gameOver = false;
+	int consecPass = 0;
+	while (!gameOver)
 	{	
+		bool haveValueToPass = false;
 		round++;
-		player = players[turn];
 
 		// TODO:  //done, REMOVE after test
 		// Print the "turn header" which shows discard pile's top card,
@@ -108,16 +110,17 @@ int main()
 		cout << string(57,'=') << endl;
 		cout << "Turn " << round << ":" << endl;
 		cout << setw(20) << left;
-		cout << "Discard Pile: " << uno.discardPile->top()->toString();
+		cout << "Discard Pile: " + uno.discardPile->top()->toString();
 		cout << setw(23) << left;
-		cout << "Current Color: " << COLORS[(int)uno.discardPile->top()->getColor()];
+		cout << "Current Color: " + COLORS[(int)uno.discardPile->top()->getColor()];
 		cout << "Draw Pile: " << uno.drawPile->size() << endl;
 		cout << string(57,'-') << endl;
 
 		// Print the name of the current player.
 		// (Hint: you can use the turn integer to index the players array
 		//  to get a pointer to the current player.)
-		cout << player->getName() << endl;
+		player = players[turn];
+		cout << player->getName() << ":" << endl;
 
 		// If cardsToDraw > 0, current player draws the required # cards.
 		// If turnSkipped is true, current player skips picking and playing
@@ -126,37 +129,45 @@ int main()
 		// selected card in hand.
 		// Then call the playCard() method with the obtained index if it is
 		// not PASSED and not DRAWN.
+		int act = 0;
 		if (cardsToDraw > 0)
-		{
 			player->drawCard(uno.drawPile, cardsToDraw);
-		} 
-		if (turnSkipped)
-			continue;
-		else {
-			int act = player->pickCard(uno);
+		if (!turnSkipped)
+		{
+			act = player->pickCard(uno);
 			if (act != PASSED && act != DRAWN)
+			{
 				player->playCard(act, uno);
+				if (turnSkipped)
+					haveValueToPass = true;
+			}
 		}
+		else
+			cout << "Turn skipped!" << endl;
+		
 		
 		// Check game over condition. Exit the game loop if either:
 		// (1) current player's hand has no cards.
 		// (2) all players consecutively passed their turns
 		//     (i.e., no one can play a card or draw).
-		int allPass = 0;
-		for (int i = 0; i < P; i++)
+		if (0 == player->handSize() || turnsMax == round)
 		{
-			allPass += players[i]->pickCard(uno);
+			gameOver = true;
 		}
-		if (0 == player->handSize() || allPass == PASSED * P || turnsMax == round)
+		else if (act == PASSED)
 		{
-			break;
+			consecPass += PASSED;
+			if (consecPass == P * PASSED)
+				gameOver = true;
 		}
+		else
+			consecPass = 0;
 		
-		
-
 		// Reset cardsToDraw and turnSkipped for clean state for next turn.
-		cardsToDraw = 0;
-		turnSkipped = false;
+		if (turnSkipped && !haveValueToPass) {
+			cardsToDraw = 0;
+			turnSkipped = false;
+		}
 		// Update the turn integer to let the next player become current.
 		turn = (turn + delta + P) % P;
 	}
@@ -173,10 +184,10 @@ int main()
 	{
 		cout << players[i]->getName() << " owes";
 		cout << setw(16) << right;
-		cout << players[i]->handPoints() << " point(s): ";
+		cout << to_string(players[i]->handPoints()) + " point(s): ";
 		players[i]->printHand();
 		if (players[P - 1 - i]->handPoints() <= minPlayer->handPoints())
 			minPlayer = players[P - 1 - i];
 	}
-	cout << "The winner is " << minPlayer->getName() << endl;
+	cout << "The winner is " << minPlayer->getName() << "!" << endl;
 }

@@ -4,7 +4,6 @@
 // TODO: //done, REMOVE after test
 // Define the Bot class which inherits from Player.
 #include "Player.h"
-int const ZERO = 0;
 
 class Bot : public Player
 {

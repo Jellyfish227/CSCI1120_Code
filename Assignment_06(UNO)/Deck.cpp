@@ -37,11 +37,11 @@ void Deck::print() {
     // all cards of the deck. List at most 10 cards per line.
     int counter = 0;
     for (Card *c : cards) 
-    {
-        cout << setw(8) << left;
-        cout << c->toString() << "=" << (int)c->getValue();
+    {   
+        string str = c->toString() + "=" + to_string((int)c->getValue());
+        cout << setw(8) << left << str;
         counter++;
-        if (counter == 10)
+        if (counter == 10 || c == cards.back())
         {
             cout << endl;
             counter = 0;
