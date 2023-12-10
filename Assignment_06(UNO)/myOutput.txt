@@ -461,6 +461,6 @@ Player 3 (Bot) owes   60 point(s): [Y6] [RR] [GR] [G6] [R0] [G8]
 Player 4 (Bot) owes    9 point(s): [G5] [Y4]
 The winner is Player 2 (Man)!
 
-X:\CSCI1120_Code\x64\Debug\Assignment_06(UNO).exe (process 27928) exited with code 0.
+X:\CSCI1120_Code\x64\Debug\Assignment_06(UNO).exe (process 9520) exited with code 0.
 To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
 Press any key to close this window . . .
