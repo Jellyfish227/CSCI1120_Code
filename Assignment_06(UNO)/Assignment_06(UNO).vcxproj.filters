@@ -103,6 +103,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="unoGameDebugLog.txt" />
+    <Text Include="unoGameDebugLog.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
