@@ -10,7 +10,7 @@ Bot::Bot() : Player(){
 }
 
 int Bot::pickCard(GameState &uno){
-    printHand();
+    printHand(uno.debugMode);
     for (int i = 0; i < handSize(); i++)
     {
         if (hand.at(i)->match(uno.discardPile->top()))
@@ -19,10 +19,10 @@ int Bot::pickCard(GameState &uno){
 
     if (uno.drawPile->size() != 0)
     {
-        uno.drawPile->draw(hand);
+        drawCard(uno.drawPile);
         if (uno.debugMode)
-            cout << "Drawn [" + hand.at(hand.size() - 1)->toString() + "]" << endl;
-        if (hand.back() == uno.discardPile->top())
+            cout << "Drawn " + hand.back()->toString() << endl;
+        if (hand.back()->match(uno.discardPile->top()))
             return handSize() - 1;
         return DRAWN;
     } else

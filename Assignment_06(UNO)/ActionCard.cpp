@@ -22,8 +22,9 @@ bool ActionCard::match(Card* top) {
     // Hint: use dynamic_cast<>().
     // If so, check if this action matches top's action too.
     // Return true if either color or action matches.
-    return top->getColor() == this->getColor()
-            || dynamic_cast<ActionCard*>(top)->getAction() == this->getAction();
+    ActionCard* cardToCompare = dynamic_cast<ActionCard*>(top);
+    return top->getColor() == getColor()
+        || (cardToCompare != nullptr && cardToCompare->getAction() == getAction());
 }
 
 string ActionCard::toString() {

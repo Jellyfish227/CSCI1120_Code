@@ -14,4 +14,5 @@ Reverse::Reverse(Color c) : ActionCard(c, Action::Reverse) {
 
 void Reverse::play(GameState& uno) {
     *(uno.delta) *= -1;
+    Card::play(uno);
 }
