@@ -1,0 +1,683 @@
+
+X:\CSCI1120_Code\x64\Debug>echo 21^& echo Y^& echo 1000^& echo 0 5 | ".\Assignment_06(UNO).exe"
+Enter seed (or hit Enter): Seed: 21
+Play in debug mode (Y/N)? Debug mode: true
+Max. turns to play: Max. turns: 1000
+Enter # man and bot players: #Men: 0; #Bots: 5
+Cards created:
+[R0]=0  [R1]=1  [R2]=2  [R3]=3  [R4]=4  [R5]=5  [R6]=6  [R7]=7  [R8]=8  [R9]=9
+[RR]=20 [RS]=20 [RD]=20 [RR]=20 [RS]=20 [RD]=20 [Y0]=0  [Y1]=1  [Y2]=2  [Y3]=3
+[Y4]=4  [Y5]=5  [Y6]=6  [Y7]=7  [Y8]=8  [Y9]=9  [YR]=20 [YS]=20 [YD]=20 [YR]=20
+[YS]=20 [YD]=20 [G0]=0  [G1]=1  [G2]=2  [G3]=3  [G4]=4  [G5]=5  [G6]=6  [G7]=7
+[G8]=8  [G9]=9  [GR]=20 [GS]=20 [GD]=20 [GR]=20 [GS]=20 [GD]=20 [B0]=0  [B1]=1
+[B2]=2  [B3]=3  [B4]=4  [B5]=5  [B6]=6  [B7]=7  [B8]=8  [B9]=9  [BR]=20 [BS]=20
+[BD]=20 [BR]=20 [BS]=20 [BD]=20 [WC]=50 [WD]=50 [WC]=50 [WD]=50 [WC]=50 [WD]=50
+[WC]=50 [WD]=50
+Player 1 (Bot) drawn 7 card(s).
+Player 2 (Bot) drawn 7 card(s).
+Player 3 (Bot) drawn 7 card(s).
+Player 4 (Bot) drawn 7 card(s).
+Player 5 (Bot) drawn 7 card(s).
+Draw pile after shuffling and dealing:
+[GD]=20 [G0]=0  [YR]=20 [B4]=4  [Y7]=7  [RR]=20 [B6]=6  [G6]=6  [G8]=8  [R3]=3
+[Y5]=5  [R1]=1  [R0]=0  [WD]=50 [BD]=20 [RD]=20 [GR]=20 [Y9]=9  [BS]=20 [YD]=20
+[B0]=0  [R8]=8  [G3]=3  [BS]=20 [G1]=1  [Y0]=0  [WC]=50 [R5]=5  [WD]=50 [RR]=20
+[YD]=20 [BR]=20 [B1]=1  [Y8]=8  [R2]=2  [YR]=20
+=========================================================
+Turn 1:
+Discard Pile: [WC]  Current Color: Wild    Draw Pile: 36
+---------------------------------------------------------
+Player 1 (Bot):
+[YS] [R6] [B2] [R9] [RS] [BD] [WC]
+Discarded [WC]
+Color changed to Red!
+=========================================================
+Turn 2:
+Discard Pile: [WC]  Current Color: Red     Draw Pile: 36
+---------------------------------------------------------
+Player 2 (Bot):
+[B9] [R7] [Y6] [GR] [Y2] [WC] [B3]
+Discarded [R7]
+=========================================================
+Turn 3:
+Discard Pile: [R7]  Current Color: Red     Draw Pile: 36
+---------------------------------------------------------
+Player 3 (Bot):
+[Y3] [WD] [R4] [B8] [B7] [GS] [Y1]
+Discarded [WD]
+Color changed to Yellow!
+=========================================================
+Turn 4:
+Discard Pile: [WD]  Current Color: Yellow  Draw Pile: 36
+---------------------------------------------------------
+Player 4 (Bot):
+Player 4 (Bot) drawn 4 card(s).
+Turn skipped!
+=========================================================
+Turn 5:
+Discard Pile: [WD]  Current Color: Yellow  Draw Pile: 32
+---------------------------------------------------------
+Player 5 (Bot):
+[RS] [GS] [G5] [G7] [Y4] [G4] [B5]
+Discarded [Y4]
+=========================================================
+Turn 6:
+Discard Pile: [Y4]  Current Color: Yellow  Draw Pile: 32
+---------------------------------------------------------
+Player 1 (Bot):
+[YS] [R6] [B2] [R9] [RS] [BD]
+Discarded [YS]
+=========================================================
+Turn 7:
+Discard Pile: [YS]  Current Color: Yellow  Draw Pile: 32
+---------------------------------------------------------
+Player 2 (Bot):
+Turn skipped!
+=========================================================
+Turn 8:
+Discard Pile: [YS]  Current Color: Yellow  Draw Pile: 32
+---------------------------------------------------------
+Player 3 (Bot):
+[Y3] [R4] [B8] [B7] [GS] [Y1]
+Discarded [Y3]
+=========================================================
+Turn 9:
+Discard Pile: [Y3]  Current Color: Yellow  Draw Pile: 32
+---------------------------------------------------------
+Player 4 (Bot):
+[G9] [G2] [WD] [YS] [RD] [BR] [GD] [GD] [G0] [YR] [B4]
+Discarded [WD]
+Color changed to Green!
+=========================================================
+Turn 10:
+Discard Pile: [WD]  Current Color: Green   Draw Pile: 32
+---------------------------------------------------------
+Player 5 (Bot):
+Player 5 (Bot) drawn 4 card(s).
+Turn skipped!
+=========================================================
+Turn 11:
+Discard Pile: [WD]  Current Color: Green   Draw Pile: 28
+---------------------------------------------------------
+Player 1 (Bot):
+[R6] [B2] [R9] [RS] [BD]
+Player 1 (Bot) drawn 1 card(s).
+Drawn [G8]
+Discarded [G8]
+=========================================================
+Turn 12:
+Discard Pile: [G8]  Current Color: Green   Draw Pile: 27
+---------------------------------------------------------
+Player 2 (Bot):
+[B9] [Y6] [GR] [Y2] [WC] [B3]
+Discarded [GR]
+=========================================================
+Turn 13:
+Discard Pile: [GR]  Current Color: Green   Draw Pile: 27
+---------------------------------------------------------
+Player 1 (Bot):
+[R6] [B2] [R9] [RS] [BD]
+Player 1 (Bot) drawn 1 card(s).
+Drawn [R3]
+=========================================================
+Turn 14:
+Discard Pile: [GR]  Current Color: Green   Draw Pile: 26
+---------------------------------------------------------
+Player 5 (Bot):
+[RS] [GS] [G5] [G7] [G4] [B5] [Y7] [RR] [B6] [G6]
+Discarded [GS]
+=========================================================
+Turn 15:
+Discard Pile: [GS]  Current Color: Green   Draw Pile: 26
+---------------------------------------------------------
+Player 4 (Bot):
+Turn skipped!
+=========================================================
+Turn 16:
+Discard Pile: [GS]  Current Color: Green   Draw Pile: 26
+---------------------------------------------------------
+Player 3 (Bot):
+[R4] [B8] [B7] [GS] [Y1]
+Discarded [GS]
+=========================================================
+Turn 17:
+Discard Pile: [GS]  Current Color: Green   Draw Pile: 26
+---------------------------------------------------------
+Player 2 (Bot):
+Turn skipped!
+=========================================================
+Turn 18:
+Discard Pile: [GS]  Current Color: Green   Draw Pile: 26
+---------------------------------------------------------
+Player 1 (Bot):
+[R6] [B2] [R9] [RS] [BD] [R3]
+Discarded [RS]
+=========================================================
+Turn 19:
+Discard Pile: [RS]  Current Color: Red     Draw Pile: 26
+---------------------------------------------------------
+Player 5 (Bot):
+Turn skipped!
+=========================================================
+Turn 20:
+Discard Pile: [RS]  Current Color: Red     Draw Pile: 26
+---------------------------------------------------------
+Player 4 (Bot):
+[G9] [G2] [YS] [RD] [BR] [GD] [GD] [G0] [YR] [B4]
+Discarded [YS]
+=========================================================
+Turn 21:
+Discard Pile: [YS]  Current Color: Yellow  Draw Pile: 26
+---------------------------------------------------------
+Player 3 (Bot):
+Turn skipped!
+=========================================================
+Turn 22:
+Discard Pile: [YS]  Current Color: Yellow  Draw Pile: 26
+---------------------------------------------------------
+Player 2 (Bot):
+[B9] [Y6] [Y2] [WC] [B3]
+Discarded [Y6]
+=========================================================
+Turn 23:
+Discard Pile: [Y6]  Current Color: Yellow  Draw Pile: 26
+---------------------------------------------------------
+Player 1 (Bot):
+[R6] [B2] [R9] [BD] [R3]
+Discarded [R6]
+=========================================================
+Turn 24:
+Discard Pile: [R6]  Current Color: Red     Draw Pile: 26
+---------------------------------------------------------
+Player 5 (Bot):
+[RS] [G5] [G7] [G4] [B5] [Y7] [RR] [B6] [G6]
+Discarded [RS]
+=========================================================
+Turn 25:
+Discard Pile: [RS]  Current Color: Red     Draw Pile: 26
+---------------------------------------------------------
+Player 4 (Bot):
+Turn skipped!
+=========================================================
+Turn 26:
+Discard Pile: [RS]  Current Color: Red     Draw Pile: 26
+---------------------------------------------------------
+Player 3 (Bot):
+[R4] [B8] [B7] [Y1]
+Discarded [R4]
+=========================================================
+Turn 27:
+Discard Pile: [R4]  Current Color: Red     Draw Pile: 26
+---------------------------------------------------------
+Player 2 (Bot):
+[B9] [Y2] [WC] [B3]
+Discarded [WC]
+Color changed to Blue!
+=========================================================
+Turn 28:
+Discard Pile: [WC]  Current Color: Blue    Draw Pile: 26
+---------------------------------------------------------
+Player 1 (Bot):
+[B2] [R9] [BD] [R3]
+Discarded [B2]
+=========================================================
+Turn 29:
+Discard Pile: [B2]  Current Color: Blue    Draw Pile: 26
+---------------------------------------------------------
+Player 5 (Bot):
+[G5] [G7] [G4] [B5] [Y7] [RR] [B6] [G6]
+Discarded [B5]
+=========================================================
+Turn 30:
+Discard Pile: [B5]  Current Color: Blue    Draw Pile: 26
+---------------------------------------------------------
+Player 4 (Bot):
+[G9] [G2] [RD] [BR] [GD] [GD] [G0] [YR] [B4]
+Discarded [BR]
+=========================================================
+Turn 31:
+Discard Pile: [BR]  Current Color: Blue    Draw Pile: 26
+---------------------------------------------------------
+Player 5 (Bot):
+[G5] [G7] [G4] [Y7] [RR] [B6] [G6]
+Discarded [RR]
+=========================================================
+Turn 32:
+Discard Pile: [RR]  Current Color: Red     Draw Pile: 26
+---------------------------------------------------------
+Player 4 (Bot):
+[G9] [G2] [RD] [GD] [GD] [G0] [YR] [B4]
+Discarded [RD]
+=========================================================
+Turn 33:
+Discard Pile: [RD]  Current Color: Red     Draw Pile: 26
+---------------------------------------------------------
+Player 3 (Bot):
+Player 3 (Bot) drawn 2 card(s).
+Turn skipped!
+=========================================================
+Turn 34:
+Discard Pile: [RD]  Current Color: Red     Draw Pile: 24
+---------------------------------------------------------
+Player 2 (Bot):
+[B9] [Y2] [B3]
+Player 2 (Bot) drawn 1 card(s).
+Drawn [R0]
+Discarded [R0]
+=========================================================
+Turn 35:
+Discard Pile: [R0]  Current Color: Red     Draw Pile: 23
+---------------------------------------------------------
+Player 1 (Bot):
+[R9] [BD] [R3]
+Discarded [R9]
+=========================================================
+Turn 36:
+Discard Pile: [R9]  Current Color: Red     Draw Pile: 23
+---------------------------------------------------------
+Player 5 (Bot):
+[G5] [G7] [G4] [Y7] [B6] [G6]
+Player 5 (Bot) drawn 1 card(s).
+Drawn [WD]
+Discarded [WD]
+Color changed to Green!
+=========================================================
+Turn 37:
+Discard Pile: [WD]  Current Color: Green   Draw Pile: 22
+---------------------------------------------------------
+Player 4 (Bot):
+Player 4 (Bot) drawn 4 card(s).
+Turn skipped!
+=========================================================
+Turn 38:
+Discard Pile: [WD]  Current Color: Green   Draw Pile: 18
+---------------------------------------------------------
+Player 3 (Bot):
+[B8] [B7] [Y1] [Y5] [R1]
+Player 3 (Bot) drawn 1 card(s).
+Drawn [BS]
+=========================================================
+Turn 39:
+Discard Pile: [WD]  Current Color: Green   Draw Pile: 17
+---------------------------------------------------------
+Player 2 (Bot):
+[B9] [Y2] [B3]
+Player 2 (Bot) drawn 1 card(s).
+Drawn [YD]
+=========================================================
+Turn 40:
+Discard Pile: [WD]  Current Color: Green   Draw Pile: 16
+---------------------------------------------------------
+Player 1 (Bot):
+[BD] [R3]
+Player 1 (Bot) drawn 1 card(s).
+Drawn [B0]
+=========================================================
+Turn 41:
+Discard Pile: [WD]  Current Color: Green   Draw Pile: 15
+---------------------------------------------------------
+Player 5 (Bot):
+[G5] [G7] [G4] [Y7] [B6] [G6]
+Discarded [G5]
+=========================================================
+Turn 42:
+Discard Pile: [G5]  Current Color: Green   Draw Pile: 15
+---------------------------------------------------------
+Player 4 (Bot):
+[G9] [G2] [GD] [GD] [G0] [YR] [B4] [BD] [RD] [GR] [Y9]
+Discarded [G9]
+=========================================================
+Turn 43:
+Discard Pile: [G9]  Current Color: Green   Draw Pile: 15
+---------------------------------------------------------
+Player 3 (Bot):
+[B8] [B7] [Y1] [Y5] [R1] [BS]
+Player 3 (Bot) drawn 1 card(s).
+Drawn [R8]
+=========================================================
+Turn 44:
+Discard Pile: [G9]  Current Color: Green   Draw Pile: 14
+---------------------------------------------------------
+Player 2 (Bot):
+[B9] [Y2] [B3] [YD]
+Discarded [B9]
+=========================================================
+Turn 45:
+Discard Pile: [B9]  Current Color: Blue    Draw Pile: 14
+---------------------------------------------------------
+Player 1 (Bot):
+[BD] [R3] [B0]
+Discarded [BD]
+=========================================================
+Turn 46:
+Discard Pile: [BD]  Current Color: Blue    Draw Pile: 14
+---------------------------------------------------------
+Player 5 (Bot):
+Player 5 (Bot) drawn 2 card(s).
+Turn skipped!
+=========================================================
+Turn 47:
+Discard Pile: [BD]  Current Color: Blue    Draw Pile: 12
+---------------------------------------------------------
+Player 4 (Bot):
+[G2] [GD] [GD] [G0] [YR] [B4] [BD] [RD] [GR] [Y9]
+Discarded [GD]
+=========================================================
+Turn 48:
+Discard Pile: [GD]  Current Color: Green   Draw Pile: 12
+---------------------------------------------------------
+Player 3 (Bot):
+Player 3 (Bot) drawn 2 card(s).
+Turn skipped!
+=========================================================
+Turn 49:
+Discard Pile: [GD]  Current Color: Green   Draw Pile: 10
+---------------------------------------------------------
+Player 2 (Bot):
+[Y2] [B3] [YD]
+Discarded [YD]
+=========================================================
+Turn 50:
+Discard Pile: [YD]  Current Color: Yellow  Draw Pile: 10
+---------------------------------------------------------
+Player 1 (Bot):
+Player 1 (Bot) drawn 2 card(s).
+Turn skipped!
+=========================================================
+Turn 51:
+Discard Pile: [YD]  Current Color: Yellow  Draw Pile: 8
+---------------------------------------------------------
+Player 5 (Bot):
+[G7] [G4] [Y7] [B6] [G6] [G3] [BS]
+Discarded [Y7]
+=========================================================
+Turn 52:
+Discard Pile: [Y7]  Current Color: Yellow  Draw Pile: 8
+---------------------------------------------------------
+Player 4 (Bot):
+[G2] [GD] [G0] [YR] [B4] [BD] [RD] [GR] [Y9]
+Discarded [YR]
+=========================================================
+Turn 53:
+Discard Pile: [YR]  Current Color: Yellow  Draw Pile: 8
+---------------------------------------------------------
+Player 5 (Bot):
+[G7] [G4] [B6] [G6] [G3] [BS]
+Player 5 (Bot) drawn 1 card(s).
+Drawn [WD]
+Discarded [WD]
+Color changed to Green!
+=========================================================
+Turn 54:
+Discard Pile: [WD]  Current Color: Green   Draw Pile: 7
+---------------------------------------------------------
+Player 1 (Bot):
+Player 1 (Bot) drawn 4 card(s).
+Turn skipped!
+=========================================================
+Turn 55:
+Discard Pile: [WD]  Current Color: Green   Draw Pile: 3
+---------------------------------------------------------
+Player 2 (Bot):
+[Y2] [B3]
+Player 2 (Bot) drawn 1 card(s).
+Drawn [Y8]
+=========================================================
+Turn 56:
+Discard Pile: [WD]  Current Color: Green   Draw Pile: 2
+---------------------------------------------------------
+Player 3 (Bot):
+[B8] [B7] [Y1] [Y5] [R1] [BS] [R8] [G1] [Y0]
+Discarded [G1]
+=========================================================
+Turn 57:
+Discard Pile: [G1]  Current Color: Green   Draw Pile: 2
+---------------------------------------------------------
+Player 4 (Bot):
+[G2] [GD] [G0] [B4] [BD] [RD] [GR] [Y9]
+Discarded [G2]
+=========================================================
+Turn 58:
+Discard Pile: [G2]  Current Color: Green   Draw Pile: 2
+---------------------------------------------------------
+Player 5 (Bot):
+[G7] [G4] [B6] [G6] [G3] [BS]
+Discarded [G7]
+=========================================================
+Turn 59:
+Discard Pile: [G7]  Current Color: Green   Draw Pile: 2
+---------------------------------------------------------
+Player 1 (Bot):
+[R3] [B0] [WC] [R5] [RR] [YD] [BR] [B1]
+Discarded [WC]
+Color changed to Red!
+=========================================================
+Turn 60:
+Discard Pile: [WC]  Current Color: Red     Draw Pile: 2
+---------------------------------------------------------
+Player 2 (Bot):
+[Y2] [B3] [Y8]
+Player 2 (Bot) drawn 1 card(s).
+Drawn [R2]
+Discarded [R2]
+=========================================================
+Turn 61:
+Discard Pile: [R2]  Current Color: Red     Draw Pile: 1
+---------------------------------------------------------
+Player 3 (Bot):
+[B8] [B7] [Y1] [Y5] [R1] [BS] [R8] [Y0]
+Discarded [R1]
+=========================================================
+Turn 62:
+Discard Pile: [R1]  Current Color: Red     Draw Pile: 1
+---------------------------------------------------------
+Player 4 (Bot):
+[GD] [G0] [B4] [BD] [RD] [GR] [Y9]
+Discarded [RD]
+=========================================================
+Turn 63:
+Discard Pile: [RD]  Current Color: Red     Draw Pile: 1
+---------------------------------------------------------
+Player 5 (Bot):
+Player 5 (Bot) drawn 1 card(s).
+Turn skipped!
+=========================================================
+Turn 64:
+Discard Pile: [RD]  Current Color: Red     Draw Pile: 0
+---------------------------------------------------------
+Player 1 (Bot):
+[R3] [B0] [R5] [RR] [YD] [BR] [B1]
+Discarded [R3]
+=========================================================
+Turn 65:
+Discard Pile: [R3]  Current Color: Red     Draw Pile: 0
+---------------------------------------------------------
+Player 2 (Bot):
+[Y2] [B3] [Y8]
+Discarded [B3]
+=========================================================
+Turn 66:
+Discard Pile: [B3]  Current Color: Blue    Draw Pile: 0
+---------------------------------------------------------
+Player 3 (Bot):
+[B8] [B7] [Y1] [Y5] [BS] [R8] [Y0]
+Discarded [B8]
+=========================================================
+Turn 67:
+Discard Pile: [B8]  Current Color: Blue    Draw Pile: 0
+---------------------------------------------------------
+Player 4 (Bot):
+[GD] [G0] [B4] [BD] [GR] [Y9]
+Discarded [B4]
+=========================================================
+Turn 68:
+Discard Pile: [B4]  Current Color: Blue    Draw Pile: 0
+---------------------------------------------------------
+Player 5 (Bot):
+[G4] [B6] [G6] [G3] [BS] [YR]
+Discarded [G4]
+=========================================================
+Turn 69:
+Discard Pile: [G4]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 1 (Bot):
+[B0] [R5] [RR] [YD] [BR] [B1]
+Turn passed!
+=========================================================
+Turn 70:
+Discard Pile: [G4]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 2 (Bot):
+[Y2] [Y8]
+Turn passed!
+=========================================================
+Turn 71:
+Discard Pile: [G4]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 3 (Bot):
+[B7] [Y1] [Y5] [BS] [R8] [Y0]
+Turn passed!
+=========================================================
+Turn 72:
+Discard Pile: [G4]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 4 (Bot):
+[GD] [G0] [BD] [GR] [Y9]
+Discarded [GD]
+=========================================================
+Turn 73:
+Discard Pile: [GD]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 5 (Bot):
+No more cards on draw pile!
+Turn skipped!
+=========================================================
+Turn 74:
+Discard Pile: [GD]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 1 (Bot):
+[B0] [R5] [RR] [YD] [BR] [B1]
+Discarded [YD]
+=========================================================
+Turn 75:
+Discard Pile: [YD]  Current Color: Yellow  Draw Pile: 0
+---------------------------------------------------------
+Player 2 (Bot):
+No more cards on draw pile!
+Turn skipped!
+=========================================================
+Turn 76:
+Discard Pile: [YD]  Current Color: Yellow  Draw Pile: 0
+---------------------------------------------------------
+Player 3 (Bot):
+[B7] [Y1] [Y5] [BS] [R8] [Y0]
+Discarded [Y1]
+=========================================================
+Turn 77:
+Discard Pile: [Y1]  Current Color: Yellow  Draw Pile: 0
+---------------------------------------------------------
+Player 4 (Bot):
+[G0] [BD] [GR] [Y9]
+Discarded [Y9]
+=========================================================
+Turn 78:
+Discard Pile: [Y9]  Current Color: Yellow  Draw Pile: 0
+---------------------------------------------------------
+Player 5 (Bot):
+[B6] [G6] [G3] [BS] [YR]
+Discarded [YR]
+=========================================================
+Turn 79:
+Discard Pile: [YR]  Current Color: Yellow  Draw Pile: 0
+---------------------------------------------------------
+Player 4 (Bot):
+[G0] [BD] [GR]
+Discarded [GR]
+=========================================================
+Turn 80:
+Discard Pile: [GR]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 5 (Bot):
+[B6] [G6] [G3] [BS]
+Discarded [G6]
+=========================================================
+Turn 81:
+Discard Pile: [G6]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 1 (Bot):
+[B0] [R5] [RR] [BR] [B1]
+Turn passed!
+=========================================================
+Turn 82:
+Discard Pile: [G6]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 2 (Bot):
+[Y2] [Y8]
+Turn passed!
+=========================================================
+Turn 83:
+Discard Pile: [G6]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 3 (Bot):
+[B7] [Y5] [BS] [R8] [Y0]
+Turn passed!
+=========================================================
+Turn 84:
+Discard Pile: [G6]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 4 (Bot):
+[G0] [BD]
+Discarded [G0]
+=========================================================
+Turn 85:
+Discard Pile: [G0]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 5 (Bot):
+[B6] [G3] [BS]
+Discarded [G3]
+=========================================================
+Turn 86:
+Discard Pile: [G3]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 1 (Bot):
+[B0] [R5] [RR] [BR] [B1]
+Turn passed!
+=========================================================
+Turn 87:
+Discard Pile: [G3]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 2 (Bot):
+[Y2] [Y8]
+Turn passed!
+=========================================================
+Turn 88:
+Discard Pile: [G3]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 3 (Bot):
+[B7] [Y5] [BS] [R8] [Y0]
+Turn passed!
+=========================================================
+Turn 89:
+Discard Pile: [G3]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 4 (Bot):
+[BD]
+Turn passed!
+=========================================================
+Turn 90:
+Discard Pile: [G3]  Current Color: Green   Draw Pile: 0
+---------------------------------------------------------
+Player 5 (Bot):
+[B6] [BS]
+Turn passed!
+**********
+Game Over!
+**********
+Player 1 (Bot) owes   46 point(s): [B0] [R5] [RR] [BR] [B1]
+Player 2 (Bot) owes   10 point(s): [Y2] [Y8]
+Player 3 (Bot) owes   40 point(s): [B7] [Y5] [BS] [R8] [Y0]
+Player 4 (Bot) owes   20 point(s): [BD]
+Player 5 (Bot) owes   26 point(s): [B6] [BS]
+The winner is Player 2 (Bot)!
+
+X:\CSCI1120_Code\x64\Debug>

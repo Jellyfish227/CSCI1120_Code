@@ -132,23 +132,27 @@ int main()
 				if (turnSkipped)
 					haveValueToPass = true;
 			}
+			else if (act == PASSED)
+			{
+				cout << "Turn passed!" << endl;
+			}
 		}
 		else
 			cout << "Turn skipped!" << endl;
 		
 
-		if (0 == player->handSize() || turnsMax == round)
+		if (0 == player->handSize() || turnsMax == round) //either this player have no card or this is the last round
 		{
 			gameOver = true;
 		}
-		else if (act == PASSED)
+		else if (act == PASSED) //consecutive pass check if this player is PASSED
 		{
-			consecPass += PASSED;
-			if (consecPass == P * PASSED)
+			consecPass += PASSED; //cumulate consecutive pass counter
+			if (consecPass == P * PASSED) //P player passed
 				gameOver = true;
 		}
 		else
-			consecPass = 0;
+			consecPass = 0; //this player didn't pass, no longer consecutive and therefore reset the counter
 		
 		// Reset cardsToDraw and turnSkipped for clean state for next turn.
 		if (turnSkipped && !haveValueToPass) {
@@ -169,7 +173,12 @@ int main()
 		cout << setw(16) << right;
 		cout << to_string(players[i]->handPoints()) + " point(s): ";
 		players[i]->printHand();
-		if (players[P - 1 - i]->handPoints() <= minPlayer->handPoints())
+		if (players[P - 1 - i]->handPoints() == 0 && minPlayer->handPoints() == 0)
+		{
+			if (players[P - 1 - i]->handSize() <= minPlayer->handSize())
+				minPlayer = players[P - 1 - i];
+		}
+		else if (players[P - 1 - i]->handPoints() <= minPlayer->handPoints())
 			minPlayer = players[P - 1 - i];
 	}
 	cout << "The winner is " << minPlayer->getName() << "!" << endl;
